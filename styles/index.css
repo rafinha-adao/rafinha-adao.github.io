@@ -8,12 +8,12 @@
 }
 
 body {
-  background-color: #353535;
+  background-color: #010440;
 }
 
 body header nav {
-  height: 4.5rem;
-  background-color: #a73333;
+  height: 4rem;
+  background-color: #05AFF2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,15 +23,40 @@ body header nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 0.5rem 2rem;
 }
 
 body header nav .logo {
-  max-width: 35rem;
+  max-width: 8rem;
   width: 90%;
 }
 
 body header nav ul {
-  max-width: 35rem;
+  max-width: 56rem;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body header nav ul li a {
+  color: #F2F2F2;
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin: 0 0.5rem;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+}
+
+body header nav ul li a:hover {
+  background-color: #0B2D59;
+}
+
+body header nav .configs {
+  max-width: 8rem;
   width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -39,11 +64,6 @@ body header nav ul {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-}
-
-body header nav ul li a {
-  color: #FFFFFF;
-  margin: 0 1rem;
 }
 
 body main {
@@ -67,7 +87,7 @@ body main .introduction {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 70rem;
+  width: 72rem;
   height: 40rem;
 }
 
@@ -92,7 +112,7 @@ body main .introduction .hello h1 {
 }
 
 body main .introduction .media {
-  width: 34rem;
+  width: 36rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

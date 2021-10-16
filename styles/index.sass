@@ -8,32 +8,46 @@
     font-family: $openSans
 
 body
-    background-color: #353535
+    background-color: $blueDark
 
     header
         
         nav
-            height: 4.5rem
-            background-color: #a73333
+            height: 4rem
+            background-color: $blueMedium
             display: flex
             align-items: center
             justify-content: center
+            padding: 0.5rem 2rem
 
             .logo
-                max-width: 35rem
+                max-width: 8rem
                 width: 90%
 
             ul
-                max-width: 35rem
+                max-width: 56rem
                 width: 90%
                 display: flex
-                justify-content: flex-end
+                justify-content: center
 
                 li
 
                     a
-                        color: #FFFFFF
-                        margin: 0 1rem
+                        color: $white
+                        font-size: 1.125rem
+                        font-weight: 500
+                        margin: 0 0.5rem
+                        padding: 0.8rem
+                        border-radius: 0.5rem
+
+                        &:hover
+                            background-color: $blueDarkMedium
+
+            .configs
+                max-width: 8rem
+                width: 90%
+                display: flex
+                justify-content: flex-end
 
     main
         display: flex
@@ -44,7 +58,7 @@ body
             align-items: center
             justify-content: center
             flex-wrap: wrap
-            width: 70rem
+            width: 72rem
             height: 40rem
 
             .hello
@@ -60,7 +74,7 @@ body
                     color: #FFFFFF
                 
             .media
-                width: 34rem
+                width: 36rem
                 display: flex
                 align-items: center
                 justify-content: center
