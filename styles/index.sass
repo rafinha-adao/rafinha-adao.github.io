@@ -13,7 +13,7 @@ body
     header
         
         nav
-            height: 4rem
+            height: 3.5rem
             background-color: $blueMedium
             display: flex
             align-items: center
@@ -21,11 +21,17 @@ body
             padding: 0.5rem 2rem
 
             .logo
-                max-width: 8rem
+                max-width: 11rem
                 width: 90%
 
+                span
+                    font-size: 1.2rem
+                    font-family: $sansMono
+                    font-weight: 800
+                    color: $white
+
             ul
-                max-width: 56rem
+                max-width: 38rem
                 width: 90%
                 display: flex
                 justify-content: center
@@ -36,7 +42,7 @@ body
                         color: $white
                         font-size: 1.125rem
                         font-weight: 500
-                        margin: 0 0.5rem
+                        margin: 0 0.2rem
                         padding: 0.8rem
                         border-radius: 0.5rem
 
@@ -44,37 +50,119 @@ body
                             background-color: $blueDarkMedium
 
             .configs
-                max-width: 8rem
+                max-width: 11rem
                 width: 90%
                 display: flex
                 justify-content: flex-end
 
+                .button
+                    padding: 0.8rem 1.4rem
+                    background-color: $blueDarkMedium
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    border-radius: 0.5rem
+
+                    &:hover
+                        background-color: $blueDarkMediumHover
+
+                    span
+                        color: $white
+                        font-size: 1.125rem
+                        font-weight: 700     
+
     main
         display: flex
         justify-content: center
+        align-items: center
+        flex-direction: column
 
         .introduction
             display: flex
             align-items: center
             justify-content: center
             flex-wrap: wrap
-            width: 72rem
-            height: 40rem
+            max-width: 60rem
+            width: 90%
+            height: 30rem
+            margin: 3rem 0 0 0
 
             .hello
-                width: 36rem
+                width: 30rem
                 display: flex
-                align-items: center
+                flex-direction: column
                 justify-content: center
 
                 h1
                     font-family: $sansMono
                     font-weight: 800
-                    font-size: 3rem
+                    font-size: 3.5rem
                     color: #FFFFFF
+
+                .button
+                    width: 10rem
+                    height: 3.1rem
+                    margin: 2.5rem 1rem 1rem 0
+                    background-color: $blueMedium
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    border-radius: 0.5rem
+
+                    &:hover
+                        background-color: $blueMediumHover
+
+                    span
+                        color: $white
+                        font-size: 1.125rem
+                        font-weight: 700   
                 
             .media
-                width: 36rem
+                width: 30rem
                 display: flex
                 align-items: center
                 justify-content: center
+
+
+
+        .contact
+
+            .container
+                width: 26rem
+                height: 18rem
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                background-color: $blueMedium
+                border-radius: 0.5rem
+
+                form
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    align-items: center
+
+                    input
+                        border: 0.125rem $blueDark
+                        outline: none
+                        width: 15rem
+                        height: 2rem
+                        border-radius: 0.5rem
+                        padding: 0.5rem 1rem
+                        margin: 0.2rem
+
+                        &[type=submit]
+                            border: none
+                            margin: 1rem 0 0 0
+                            width: 12rem
+                            height: 3.1rem
+                            background-color: $blueDark
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            border-radius: 0.5rem
+                            cursor: pointer
+                            color: $white
+
+

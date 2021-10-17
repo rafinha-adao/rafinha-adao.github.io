@@ -1,45 +1,45 @@
-// CANVAS ILLUSTRATION
+// Canvas Illustration
 let illo = new Zdog.Illustration({
   element: ".zdog-canvas",
-  zoom: 2.4,
+  zoom: 2.6,
 });
 
-// GROUPS RENDER
-var frontLaptop = new Zdog.Group({
+// Groups Render
+let frontLaptop = new Zdog.Group({
   addTo: illo,
 });
 
-var backLaptop = new Zdog.Group({
+let backLaptop = new Zdog.Group({
   addTo: illo,
 });
 
-var upperLaptop = new Zdog.Group({
+let upperLaptop = new Zdog.Group({
   addTo: illo,
 });
 
-var underLaptop = new Zdog.Group({
+let underLaptop = new Zdog.Group({
   addTo: illo,
 });
 
-// LAPTOP BODY
+// Laptop Body
 let box = new Zdog.Box({
   addTo: backLaptop,
   width: 80,
   height: 60,
   depth: 5,
   stroke: false,
-  color: "#1F5AA6",
+  color: "#0B2D59",
 });
 
 box.copy({
   addTo: backLaptop,
   translate: { x: 0, y: 42, z: 26 },
-  color: "#439FD9",
+  color: "#04B2D9",
   rotate: { x: -8.2 },
   fill: true,
 });
 
-// LAPTOP KEYBOARD
+// Laptop Keyboard
 let keyboard = new Zdog.Rect({
   addTo: frontLaptop,
   translate: { x: 0, y: 38, z: 22 },
@@ -60,7 +60,7 @@ keyboard.copy({
   fill: true,
 });
 
-// LAPTOP SCREEN
+// Laptop Screen
 let screen = new Zdog.Rect({
   addTo: frontLaptop,
   translate: { x: 0, y: 0, z: 2.8 },
@@ -71,7 +71,7 @@ let screen = new Zdog.Rect({
   fill: true,
 });
 
-// LAPTOP LOGO
+// Laptop Logo
 let circle = new Zdog.Ellipse({
   addTo: backLaptop,
   translate: { x: 0, y: 0, z: -2.9 },
@@ -90,7 +90,7 @@ new Zdog.Shape({
   color: "#0F0",
 });
 
-// ANIMATE
+// Animate
 let ticker = 0;
 let cycleCount = 150;
 

@@ -12,7 +12,7 @@ body {
 }
 
 body header nav {
-  height: 4rem;
+  height: 3.5rem;
   background-color: #05AFF2;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -27,12 +27,19 @@ body header nav {
 }
 
 body header nav .logo {
-  max-width: 8rem;
+  max-width: 11rem;
   width: 90%;
 }
 
+body header nav .logo span {
+  font-size: 1.2rem;
+  font-family: "Noto Sans Mono", monospace;
+  font-weight: 800;
+  color: #F2F2F2;
+}
+
 body header nav ul {
-  max-width: 56rem;
+  max-width: 38rem;
   width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -46,7 +53,7 @@ body header nav ul li a {
   color: #F2F2F2;
   font-size: 1.125rem;
   font-weight: 500;
-  margin: 0 0.5rem;
+  margin: 0 0.2rem;
   padding: 0.8rem;
   border-radius: 0.5rem;
 }
@@ -56,7 +63,7 @@ body header nav ul li a:hover {
 }
 
 body header nav .configs {
-  max-width: 8rem;
+  max-width: 11rem;
   width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -66,6 +73,31 @@ body header nav .configs {
           justify-content: flex-end;
 }
 
+body header nav .configs .button {
+  padding: 0.8rem 1.4rem;
+  background-color: #0B2D59;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 0.5rem;
+}
+
+body header nav .configs .button:hover {
+  background-color: #102F58;
+}
+
+body header nav .configs .button span {
+  color: #F2F2F2;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
 body main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -73,6 +105,13 @@ body main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 body main .introduction {
@@ -87,18 +126,21 @@ body main .introduction {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 72rem;
-  height: 40rem;
+  max-width: 60rem;
+  width: 90%;
+  height: 30rem;
+  margin: 3rem 0 0 0;
 }
 
 body main .introduction .hello {
-  width: 36rem;
+  width: 30rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -107,12 +149,15 @@ body main .introduction .hello {
 body main .introduction .hello h1 {
   font-family: "Noto Sans Mono", monospace;
   font-weight: 800;
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: #FFFFFF;
 }
 
-body main .introduction .media {
-  width: 36rem;
+body main .introduction .hello .button {
+  width: 10rem;
+  height: 3.1rem;
+  margin: 2.5rem 1rem 1rem 0;
+  background-color: #05AFF2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -122,5 +167,95 @@ body main .introduction .media {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border-radius: 0.5rem;
+}
+
+body main .introduction .hello .button:hover {
+  background-color: #16B2f0;
+}
+
+body main .introduction .hello .button span {
+  color: #F2F2F2;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+body main .introduction .media {
+  width: 30rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .contact .container {
+  width: 26rem;
+  height: 18rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #05AFF2;
+  border-radius: 0.5rem;
+}
+
+body main .contact .container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .contact .container form input {
+  border: 0.125rem #010440;
+  outline: none;
+  width: 15rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  margin: 0.2rem;
+}
+
+body main .contact .container form input[type=submit] {
+  border: none;
+  margin: 1rem 0 0 0;
+  width: 12rem;
+  height: 3.1rem;
+  background-color: #010440;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  color: #F2F2F2;
 }
 /*# sourceMappingURL=index.css.map */
