@@ -1,0 +1,20 @@
+.theme-light {
+    --fontColor: #181818;
+    --primaryColor: #F2F2F2;
+    --secondaryColor: #05AFF2;
+    --tertiaryColor: #010440;
+}
+.theme-dark {
+    --fontColor: #F2F2F2;
+    --primaryColor: #010440;
+    --secondaryColor: #0B2D59;
+    --tertiaryColor: #05AFF2;
+}
+
+.theme-light .light {
+    display: none;
+}
+
+.theme-dark .dark {
+    display: none;
+}

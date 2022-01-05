@@ -5,15 +5,16 @@
   text-decoration: none;
   list-style: none;
   font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: #010440;
+  background-color: var(--primaryColor);
 }
 
 body header nav {
   height: 3.5rem;
-  background-color: #05AFF2;
+  background-color: var(--secondaryColor);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,13 +30,13 @@ body header nav {
 body header nav .logo {
   max-width: 11rem;
   width: 90%;
+  color: var(--fontColor);
 }
 
 body header nav .logo span {
   font-size: 1.2rem;
   font-family: "Noto Sans Mono", monospace;
   font-weight: 800;
-  color: #F2F2F2;
 }
 
 body header nav ul {
@@ -50,7 +51,7 @@ body header nav ul {
 }
 
 body header nav ul li a {
-  color: #F2F2F2;
+  color: var(--fontColor);
   font-size: 1.125rem;
   font-weight: 500;
   margin: 0 0.2rem;
@@ -59,7 +60,11 @@ body header nav ul li a {
 }
 
 body header nav ul li a:hover {
-  background-color: #0B2D59;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.15)), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  background-color: var(--secondaryColor);
 }
 
 body header nav .configs {
@@ -75,7 +80,7 @@ body header nav .configs {
 
 body header nav .configs .button {
   padding: 0.8rem 1.4rem;
-  background-color: #0B2D59;
+  background-color: var(--secondaryColor);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -86,16 +91,28 @@ body header nav .configs .button {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 0.5rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.15)), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  margin: 0 0.2rem;
+  cursor: pointer;
 }
 
 body header nav .configs .button:hover {
-  background-color: #102F58;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  opacity: 0.95;
 }
 
 body header nav .configs .button span {
-  color: #F2F2F2;
+  color: var(--fontColor);
   font-size: 1.125rem;
   font-weight: 700;
+}
+
+body header nav .configs .button i {
+  color: var(--fontColor);
+  font-size: 1.2rem;
+  position: absolute;
 }
 
 body main {
@@ -128,7 +145,6 @@ body main .introduction {
       flex-wrap: wrap;
   max-width: 60rem;
   width: 90%;
-  height: 30rem;
   margin: 3rem 0 0 0;
 }
 
@@ -150,14 +166,14 @@ body main .introduction .hello h1 {
   font-family: "Noto Sans Mono", monospace;
   font-weight: 800;
   font-size: 3.5rem;
-  color: #FFFFFF;
+  color: var(--fontColor);
 }
 
 body main .introduction .hello .button {
   width: 10rem;
   height: 3.1rem;
   margin: 2.5rem 1rem 1rem 0;
-  background-color: #05AFF2;
+  background-color: var(--secondaryColor);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -168,20 +184,25 @@ body main .introduction .hello .button {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 0.5rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.15)), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
 }
 
 body main .introduction .hello .button:hover {
-  background-color: #16B2f0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  opacity: 0.95;
 }
 
 body main .introduction .hello .button span {
-  color: #F2F2F2;
+  color: var(--fontColor);
   font-size: 1.125rem;
   font-weight: 700;
 }
 
 body main .introduction .media {
   width: 30rem;
+  height: 30rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -193,9 +214,103 @@ body main .introduction .media {
           justify-content: center;
 }
 
+body main .introduction .media img {
+  width: 18rem;
+  height: 18rem;
+}
+
+body main .studies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 60rem;
+  width: 90%;
+  margin: 3rem 0 0 0;
+}
+
+body main .studies .lang-stats-github {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .studies .lang-stats-github a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .studies .lang-stats-github a img {
+  width: 30rem;
+}
+
+body main .studies .repos-github {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .studies .repos-github .repos-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .studies .repos-github .repos-container a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0.2rem;
+}
+
+body main .studies .repos-github .repos-container a img {
+  max-height: 130em;
+  height: 90%;
+}
+
 body main .contact .container {
   width: 26rem;
-  height: 18rem;
+  height: 32rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -209,8 +324,16 @@ body main .contact .container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #05AFF2;
+  background-color: var(--secondaryColor);
   border-radius: 0.5rem;
+  margin: 1rem;
+}
+
+body main .contact .container h3 {
+  color: var(--fontColor);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 1rem 0;
 }
 
 body main .contact .container form {
@@ -229,22 +352,25 @@ body main .contact .container form {
           align-items: center;
 }
 
-body main .contact .container form input {
-  border: 0.125rem #010440;
+body main .contact .container form input, body main .contact .container form textarea {
+  border: 0.125rem solid var(--tertiaryColor);
   outline: none;
   width: 15rem;
-  height: 2rem;
+  height: 2.2rem;
   border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-  margin: 0.2rem;
+  padding: 0.5rem 0.8rem;
+  margin: 0.2rem 0;
+  resize: none;
+  font-size: 1rem;
+  caret-color: var(--secondaryColor);
 }
 
-body main .contact .container form input[type=submit] {
+body main .contact .container form input[type=submit], body main .contact .container form textarea[type=submit] {
   border: none;
-  margin: 1rem 0 0 0;
+  margin: 1rem 0;
   width: 12rem;
   height: 3.1rem;
-  background-color: #010440;
+  background-color: var(--primaryColor);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -256,6 +382,49 @@ body main .contact .container form input[type=submit] {
           justify-content: center;
   border-radius: 0.5rem;
   cursor: pointer;
-  color: #F2F2F2;
+  color: var(--fontColor);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.15)), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+body main .contact .container form input[type=submit]:hover, body main .contact .container form textarea[type=submit]:hover {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  opacity: 0.95;
+}
+
+body main .contact .container form textarea {
+  height: 6rem;
+}
+
+body main .contact .container p {
+  color: var(--fontColor);
+  text-align: center;
+}
+
+body main .contact .container .button {
+  border: none;
+  margin: 1rem 0;
+  width: 12rem;
+  height: 3.1rem;
+  background-color: #25D366;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  color: var(--fontColor);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.15)), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  font-size: 1.125rem;
+  font-weight: 700;
 }
 /*# sourceMappingURL=index.css.map */

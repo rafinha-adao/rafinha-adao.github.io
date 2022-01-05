@@ -6,15 +6,16 @@
     text-decoration: none
     list-style: none
     font-family: $openSans
+    scroll-behavior: smooth
 
 body
-    background-color: $blueDark
+    background-color: var(--primaryColor)
 
     header
-        
+
         nav
             height: 3.5rem
-            background-color: $blueMedium
+            background-color: var(--secondaryColor)
             display: flex
             align-items: center
             justify-content: center
@@ -23,12 +24,12 @@ body
             .logo
                 max-width: 11rem
                 width: 90%
+                color: var(--fontColor)
 
                 span
                     font-size: 1.2rem
                     font-family: $sansMono
                     font-weight: 800
-                    color: $white
 
             ul
                 max-width: 38rem
@@ -39,7 +40,7 @@ body
                 li
 
                     a
-                        color: $white
+                        color: var(--fontColor)
                         font-size: 1.125rem
                         font-weight: 500
                         margin: 0 0.2rem
@@ -47,7 +48,9 @@ body
                         border-radius: 0.5rem
 
                         &:hover
-                            background-color: $blueDarkMedium
+                            transition: 0.2s
+                            background-image: $gradientButton
+                            background-color: var(--secondaryColor)
 
             .configs
                 max-width: 11rem
@@ -57,19 +60,28 @@ body
 
                 .button
                     padding: 0.8rem 1.4rem
-                    background-color: $blueDarkMedium
+                    background-color: var(--secondaryColor)
                     display: flex
                     align-items: center
                     justify-content: center
                     border-radius: 0.5rem
+                    background-image: $gradientButton
+                    margin: 0 0.2rem
+                    cursor: pointer
 
                     &:hover
-                        background-color: $blueDarkMediumHover
+                        transition: 0.2s
+                        opacity: 0.95
 
                     span
-                        color: $white
+                        color: var(--fontColor)
                         font-size: 1.125rem
-                        font-weight: 700     
+                        font-weight: 700
+
+                    i
+                        color: var(--fontColor)
+                        font-size: 1.2rem
+                        position: absolute
 
     main
         display: flex
@@ -84,7 +96,6 @@ body
             flex-wrap: wrap
             max-width: 60rem
             width: 90%
-            height: 30rem
             margin: 3rem 0 0 0
 
             .hello
@@ -97,45 +108,100 @@ body
                     font-family: $sansMono
                     font-weight: 800
                     font-size: 3.5rem
-                    color: #FFFFFF
+                    color: var(--fontColor)
 
                 .button
                     width: 10rem
                     height: 3.1rem
                     margin: 2.5rem 1rem 1rem 0
-                    background-color: $blueMedium
+                    background-color: var(--secondaryColor)
                     display: flex
                     align-items: center
                     justify-content: center
                     border-radius: 0.5rem
+                    background-image: $gradientButton
 
                     &:hover
-                        background-color: $blueMediumHover
+                        transition: 0.2s
+                        opacity: 0.95
 
                     span
-                        color: $white
+                        color: var(--fontColor)
                         font-size: 1.125rem
                         font-weight: 700   
                 
             .media
                 width: 30rem
+                height: 30rem
                 display: flex
                 align-items: center
                 justify-content: center
 
+                img
+                    width: 18rem
+                    height: 18rem
 
+        .studies
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-wrap: wrap
+            max-width: 60rem
+            width: 90%
+            margin: 3rem 0 0 0
+
+            .lang-stats-github
+                display: flex
+                justify-content: center
+                align-items: center
+
+                a
+                    display: flex
+                    justify-content: center
+                    align-items: center
+
+                    img
+                        width: 30rem
+
+            .repos-github
+                display: flex
+                justify-content: center
+                align-items: center
+
+                .repos-container
+                    display: flex
+                    flex-wrap: wrap
+                    justify-content: center
+                    align-items: center
+
+                    a
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        margin: 0.2rem
+
+                        img
+                            max-height: 130em
+                            height: 90%
 
         .contact
 
             .container
                 width: 26rem
-                height: 18rem
+                height: 32rem
                 display: flex
                 flex-direction: column
                 justify-content: center
                 align-items: center
-                background-color: $blueMedium
+                background-color: var(--secondaryColor)
                 border-radius: 0.5rem
+                margin: 1rem
+
+                h3
+                    color: var(--fontColor)
+                    font-size: 1.2rem
+                    font-weight: 700
+                    margin: 1rem 0
 
                 form
                     display: flex
@@ -143,26 +209,57 @@ body
                     justify-content: center
                     align-items: center
 
-                    input
-                        border: 0.125rem $blueDark
+                    input, textarea
+                        border: 0.125rem solid var(--tertiaryColor)
                         outline: none
                         width: 15rem
-                        height: 2rem
+                        height: 2.2rem
                         border-radius: 0.5rem
-                        padding: 0.5rem 1rem
-                        margin: 0.2rem
+                        padding: 0.5rem 0.8rem
+                        margin: 0.2rem 0
+                        resize: none
+                        font-size: 1rem
+                        caret-color: var(--secondaryColor)
 
                         &[type=submit]
                             border: none
-                            margin: 1rem 0 0 0
+                            margin: 1rem 0
                             width: 12rem
                             height: 3.1rem
-                            background-color: $blueDark
+                            background-color: var(--primaryColor)
                             display: flex
                             align-items: center
                             justify-content: center
                             border-radius: 0.5rem
                             cursor: pointer
-                            color: $white
+                            color: var(--fontColor)
+                            background-image: $gradientButton
+                            font-size: 1.125rem
+                            font-weight: 700
 
+                            &:hover
+                                transition: 0.2s
+                                opacity: 0.95
 
+                    textarea
+                        height: 6rem
+
+                p
+                    color: var(--fontColor)
+                    text-align: center
+
+                .button
+                    border: none
+                    margin: 1rem 0
+                    width: 12rem
+                    height: 3.1rem
+                    background-color:#25D366
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    border-radius: 0.5rem
+                    cursor: pointer
+                    color: var(--fontColor)
+                    background-image: $gradientButton
+                    font-size: 1.125rem
+                    font-weight: 700
