@@ -44,7 +44,6 @@
                 </a>
             </div>
             <div class="media">
-                <img src="./assets/img/profile-pixel-48px.png" alt="">
                 <!--
                 <canvas class="zdog-canvas" width="360" height="320"></canvas>
                 -->
@@ -53,7 +52,7 @@
         <section class="studies" id="estudos">
             <div class="lang-stats-github">
                 <a href="https://github.com/rafinha-adao" target="_blank">
-                    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rafinha-adao&layout=compact&langs_count=6&bg_color=FFFFFF&hide_title=true"/>
+                    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rafinha-adao&layout=compact&langs_count=6&bg_color=FFFFFF&locale=pt-br&title_color=0B2D59"/>
                 </a>
             </div>
             <div class="repos-github">
@@ -79,10 +78,13 @@
         <section class="contact" id="contato">
             <div class="container">
                 <h3>Me mande uma mensagem :)</h3>
-                <form action="">
-                    <input type="text" name="Nome" id="" placeholder="Nome">
-                    <input type="email" name="Email" id="" placeholder="Email">
-                    <textarea name="Mensagem" id="" placeholder="Mensagem" maxlength="100"></textarea>
+                <form method="POST" action="https://formsubmit.co/rafaeldeoliveiraadao@gmail.com">
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/email-sent.html">
+                    <input type="hidden" name="_subject" value="Nova Mensagem do Portfólio!">
+
+                    <input type="text" name="Nome" placeholder="Nome" required>
+                    <input type="email" name="Email" placeholder="Email" required>
+                    <textarea name="Mensagem" placeholder="Mensagem" maxlength="100" required></textarea>
                     <input type="submit" value="Enviar">
                 </form>
                 <p>ou</p>
@@ -92,6 +94,7 @@
             </div>
         </section>
         <section class="about-me">
+            <img src="./assets/img/profile-pixel-48px.png" alt="">
 
         </section>
     </main>
