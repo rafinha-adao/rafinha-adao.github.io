@@ -137,6 +137,11 @@ body
                         font-weight: 700   
                 
             .media
+                width: 30rem
+                height: 25.625rem
+                display: flex
+                justify-content: flex-end
+                align-items: flex-start
                
 
         .studies
@@ -148,23 +153,17 @@ body
             width: 90%
             margin: 3rem 0 0 0
 
-            .lang-stats-github
-                display: flex
-                justify-content: center
-                align-items: center
-
-                a
-                    display: flex
-                    justify-content: center
-                    align-items: center
-
-                    img
-                        width: 30rem
+            h2
+                font-size: 2rem
+                font-weight: 700
+                color: var(--fontColor)
+                margin: 0 0 2rem 0
 
             .repos-github
                 display: flex
                 justify-content: center
                 align-items: center
+                margin: 0 0 1.5rem 0
 
                 .repos-container
                     display: flex
@@ -181,6 +180,20 @@ body
                         img
                             max-height: 130em
                             height: 90%
+
+            .lang-stats-github
+                display: flex
+                justify-content: center
+                align-items: center
+                margin: 0 0 1.5rem 0
+
+                a
+                    display: flex
+                    justify-content: center
+                    align-items: center
+
+                    img
+                        width: 30rem
 
         .contact
 
@@ -261,3 +274,17 @@ body
                     background-image: $gradientButton
                     font-size: 1.125rem
                     font-weight: 700
+
+        .about-me
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-wrap: wrap
+            max-width: 60rem
+            width: 90%
+            margin: 3rem 0 0 0
+
+    footer
+        height: 10rem
+        background-color: var(--secondaryColor)
+        
