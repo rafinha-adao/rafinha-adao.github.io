@@ -1,0 +1,328 @@
+@import _variables
+    
+*
+    margin: 0
+    padding: 0
+    text-decoration: none
+    list-style: none
+    font-family: $openSans
+    scroll-behavior: smooth
+
+body
+    background-color: var(--primaryColor)
+    &::-webkit-scrollbar
+        width: 0.7rem
+
+    &::-webkit-scrollbar-track
+        background-color: var(--primaryColor)
+
+    &::-webkit-scrollbar-thumb
+        background-color: var(--secondaryColor)
+        box-shadow: $shadow
+
+    header
+
+        nav
+            height: 3.5rem
+            background-color: var(--secondaryColor)
+            display: flex
+            align-items: center
+            justify-content: center
+            padding: 0.5rem 2rem
+            box-shadow: $shadow
+
+            .logo
+                max-width: 55rem
+                width: 90%
+                color: var(--fontColor)
+
+                span
+                    font-size: 1.2rem
+                    font-family: $sansMono
+                    font-weight: 800
+                    cursor: pointer
+
+            .configs
+                max-width: 5rem
+                width: 90%
+                display: flex
+                justify-content: flex-end
+
+                .button
+                    padding: 0.8rem
+                    background-color: var(--secondaryColor)
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    border-radius: 0.5rem
+                    background-image: $gradientButton
+                    margin: 0 0.2rem
+                    cursor: pointer
+                    width: 12rem
+
+                    &:hover
+                        transition: 0.2s
+                        opacity: 0.95
+
+                    span
+                        color: var(--fontColor)
+                        font-size: 1.125rem
+                        font-weight: 700
+
+                    i
+                        color: var(--fontColor)
+                        font-size: 1.2rem
+                        position: absolute
+
+                .theme
+                    width: 1.5rem
+                    height: 1.5rem
+
+                    &:hover
+                        i
+                            transition: 0.2s
+                            color: var(--primaryColor)
+
+    main
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+
+        .introduction
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-wrap: wrap
+            margin: 3rem 0
+            max-width: 60rem
+            width: 90%
+
+            .hello
+                max-width: 30rem
+                width: 90%
+                display: flex
+                flex-direction: column
+                justify-content: center
+
+                @media screen and (max-width: 1065px)
+                    text-align: center
+                    align-items: center
+
+                h1
+                    font-family: $sansMono
+                    font-weight: 800
+                    font-size: 2.5rem
+                    color: var(--fontColor)
+
+                .button
+                    width: 10rem
+                    height: 3.1rem
+                    margin: 2.5rem 1rem 1rem 0
+                    background-color: var(--secondaryColor)
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    border-radius: 0.5rem
+                    background-image: $gradientButton
+                    width: 12rem
+
+                    &:hover
+                        transition: 0.2s
+                        opacity: 0.95
+
+                        span
+                            transition: 0.2s
+                            color: var(--primaryColor)
+
+                    span
+                        color: var(--fontColor)
+                        font-size: 1.125rem
+                        font-weight: 700
+                
+            .media
+                max-width: 30rem
+                width: 90%
+                height: 25.625rem
+                display: flex
+                justify-content: flex-end
+                align-items: flex-start
+
+                @media screen and (max-width: 1065px)
+                    align-items: center
+                    justify-content: center
+               
+        .studies
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+            max-width: 60rem
+            width: 90%
+            margin: 3rem 0
+
+            h2
+                font-size: 2rem
+                font-weight: 700
+                color: var(--fontColor)
+                margin: 0 0 2rem 0
+                text-align: center
+
+            .studies-projects
+                display: flex
+                align-items: center
+                justify-content: center
+                flex-wrap: wrap
+
+                .card-project
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    width: 18rem
+                    height: 7rem
+                    color: var(--fontColor)
+                    border-radius: 0.5rem
+                    margin: 0.5rem
+
+                    img
+                        width: 3rem
+                        margin: 0 1rem
+
+                    .description
+                        width: 13rem
+                        margin: 0 1rem 0 0
+
+                        a
+                            h4
+                                font-family: $sansMono
+                                font-weight: 800
+                                font-size: 1rem
+                                color: var(--fontColor)
+
+        .contact
+            margin: 3rem 0
+
+            .container
+                width: 24rem
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                background-color: var(--secondaryColor)
+                border-radius: 0.5rem
+                margin: 1rem
+                box-shadow: $shadow
+                padding: 1.5rem 0.5rem
+                
+                @media screen and (max-width: 375px)
+                    width: 16rem
+
+                h3
+                    color: var(--fontColor)
+                    font-size: 1.2rem
+                    font-weight: 700
+                    margin: 0 0 1rem 0
+                    padding: 0 1rem
+                    text-align: center
+
+                form
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    align-items: center
+
+                    input, textarea
+                        border: 0.125rem solid var(--tertiaryColor)
+                        outline: none
+                        width: 15rem
+                        height: 2.2rem
+                        border-radius: 0.5rem
+                        padding: 0.5rem 0.8rem
+                        margin: 0.2rem 0
+                        resize: none
+                        font-size: 1rem
+                        caret-color: var(--secondaryColor)
+
+                        @media screen and (max-width: 375px)
+                            width: 12rem
+
+                        &[type=submit]
+                            border: none
+                            margin: 1rem 0
+                            width: 12rem
+                            height: 3.1rem
+                            background-color: var(--primaryColor)
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            border-radius: 0.5rem
+                            cursor: pointer
+                            color: var(--fontColor)
+                            background-image: $gradientButton
+                            font-size: 1.125rem
+                            font-weight: 700
+
+                            &:hover
+                                transition: 0.2s
+                                opacity: 0.95
+
+                    textarea
+                        height: 6rem
+
+                p
+                    color: var(--fontColor)
+                    text-align: center
+
+                .button
+                    border: none
+                    margin: 1rem 0
+                    width: 12rem
+                    height: 3.1rem
+                    background-color:#25D366
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    border-radius: 0.5rem
+                    cursor: pointer
+                    color: var(--fontColor)
+                    background-image: $gradientButton
+                    font-size: 1.125rem
+                    font-weight: 700
+
+                    &:hover
+                        transition: 0.2s
+                        opacity: 0.95
+
+    footer
+        background-color: var(--secondaryColor)
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        padding: 1rem
+        margin: 3rem 0 0 0
+        box-shadow: $shadow
+
+        .social-media
+            margin: 0 0 1rem 0
+
+            a
+                color: var(--fontColor)
+                margin: 0 0.4rem
+
+                &:hover
+                    transition: 0.4s
+                    color: var(--primaryColor)
+
+                i
+                    font-size: 1.8rem
+
+        img
+            width: 8rem
+            height: 8rem
+            margin: 0 0 1rem 0
+
+        p
+            color: var(--fontColor)
+            text-align: center
+        

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="theme-light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/theme.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+    <title>Rafael Adão</title>
+</head>
+<body id="theme">
+    <header>
+        <nav>
+            <div class="logo">
+                <<span>Rafael Adão</span>/>
+            </div>
+            <ul>
+                
+            </ul>
+            <div class="configs">
+                <a class="button theme" onclick="changeTheme()">
+                    <i class="bi bi-brightness-high light"></i>
+                    <i class="bi bi-moon dark"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="introduction">
+            <div class="hello">
+                <h1>
+                    Olá, me chamo Rafael e sou estudante de programação
+                </h1>
+                <a href="#contato" class="button">
+                    <span>Fale Comigo</span>
+                </a>
+            </div>
+            <div class="media">
+                <canvas class="zdog-canvas" width="320" height="290"></canvas>
+            </div>
+        </section>
+        <!--
+        <section class="works">
+            <h2>Serviços</h2>
+            <div class="container-works">
+                <div class="card-work">
+                    
+                </div>
+            </div>
+        </section>
+        -->
+        <section class="studies" id="estudos">
+            <h2>Estudos e Projetos</h2>
+            <div class="studies-projects">
+                <div class="card-project">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" />
+                    <div class="description">
+                        <a href="https://github.com/rafinha-adao/vue-ecommmerce" target="_blank">
+                            <h4>vue-ecommmerce</h4>
+                        </a>
+                        <p>Vue e-commerce com vuex e vue-router</p>
+                    </div>
+                </div>
+                <div class="card-project">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg" />
+                    <div class="description">
+                        <a href="https://github.com/rafinha-adao/php-crud" target="_blank">
+                            <h4>php-crud</h4>
+                        </a>
+                        <p>Crud feito com PHP e MySQL</p>
+                    </div>
+                </div>
+                <div class="card-project">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" />
+                    <div class="description">
+                        <a href="https://github.com/rafinha-adao/rafinha-adao.github.io" target="_blank">
+                            <h4>rafinha-adao</h4>
+                        </a>
+                        <p>Meu site e portfólio pessoal</p>
+                    </div>
+                </div>
+                <div class="card-project">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-plain.svg" />
+                    <div class="description">
+                        <a href="https://github.com/rafinha-adao/angular-project" target="_blank">
+                            <h4>angular-project</h4>
+                        </a>
+                        <p>Projeto de aprendizado feito com Angular</p>
+                    </div>
+                </div>
+                <div class="card-project">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" />
+                    <div class="description">
+                        <a href="https://github.com/rafinha-adao/node-mongodb" target="_blank">
+                            <h4>node-mongodb</h4>
+                        </a>
+                        <p>API feita em NodeJs com conexão ao MongoDB</p>
+                    </div>
+                </div>
+                <div class="card-project">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" />
+                    <div class="description">
+                        <a href="https://github.com/rafinha-adao/app-java-jokenpo" target="_blank">
+                            <h4>app-java-jokenpo</h4>
+                        </a>
+                        <p>App do jogo Jokenpô feito em Java</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact" id="contato">
+            <div class="container">
+                <h3>Me mande uma mensagem :)</h3>
+                <form method="POST" action="https://formsubmit.co/ec129e5d7ad184c989f403e1a53adc8c">
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/email-sent.html">
+                    <input type="hidden" name="_subject" value="Nova Mensagem do Portfólio!">
+
+                    <input type="text" name="Nome" placeholder="Nome" required>
+                    <input type="email" name="Email" placeholder="Email" required>
+                    <textarea name="Mensagem" placeholder="Mensagem" maxlength="100" required></textarea>
+                    <input type="submit" value="Enviar">
+                </form>
+                <p>ou</p>
+                <a class="button" href="https://wa.me/5519995827504?text=Olá%20Rafael,%20tudo%20bem?" target="_blank">
+                    <i class="bi bi-whatsapp"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <img src="./assets/img/profile-pixel-48px.png" alt="">
+        <div class="social-media">
+            <a href="https://github.com/rafinha-adao" target="_blank">
+                <i class="bi bi-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/rafael-oliveira-adão" target="_blank">
+                <i class="bi bi-linkedin"></i>
+            </a>
+        </div>
+        <p>Desenvolvido por Rafael Adão e hospedado pelo GitHub.</p>
+    </footer>
+
+    <script src="./js/theme.js"></script>
+
+    <script src="https://unpkg.com/zdog@1/dist/zdog.dist.min.js"></script>
+    <script src="js/animations/laptop.js"></script>
+   
+</body>
+</html>
