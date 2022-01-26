@@ -1,7 +1,7 @@
 // Canvas Illustration
 let illo = new Zdog.Illustration({
   element: ".zdog-canvas",
-  zoom: 2.6,
+  zoom: 2.35,
 });
 
 // Groups Render

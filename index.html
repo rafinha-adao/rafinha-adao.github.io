@@ -19,13 +19,9 @@
                 <<span>Rafael Adão</span>/>
             </div>
             <ul>
-                <li><a href="#estudos">Estudos</a></li>
-                <li><a href="#projetos">Trabalhos</a></li>
+                
             </ul>
             <div class="configs">
-                <a href="#contato" class="button">
-                    <span>Contato</span>
-                </a>
                 <a class="button theme" onclick="changeTheme()">
                     <i class="bi bi-brightness-high light"></i>
                     <i class="bi bi-moon dark"></i>
@@ -37,43 +33,84 @@
         <section class="introduction">
             <div class="hello">
                 <h1>
-                    Olá, me chamo Rafael e sou estudante de programação.
+                    Olá, me chamo Rafael e sou estudante de programação
                 </h1>
                 <a href="#contato" class="button">
                     <span>Fale Comigo</span>
                 </a>
             </div>
             <div class="media">
-                <canvas class="zdog-canvas" width="360" height="320"></canvas>
-             
+                <canvas class="zdog-canvas" width="320" height="290"></canvas>
             </div>
         </section>
-        <section class="studies" id="estudos">
-            <h2>Principais Estudos e Projetos</h2>
-            <div class="repos-github">
-                <div class="repos-container">
-                    <a href="https://github.com/rafinha-adao/angular-project" target="_blank">
-                        <img src="https://github-readme-stats.vercel.app/api/pin/?username=rafinha-adao&repo=angular-project&title_color=0B2D59" alt="">
-                    </a>
-                    <a href="https://github.com/rafinha-adao/vue-ecommmerce" target="_blank">
-                        <img src="https://github-readme-stats.vercel.app/api/pin/?username=rafinha-adao&repo=vue-ecommmerce&title_color=0B2D59" alt="">
-                    </a>
-                    <a href="https://github.com/rafinha-adao/node-mongodb" target="_blank">
-                        <img src="https://github-readme-stats.vercel.app/api/pin/?username=rafinha-adao&repo=node-mongodb&title_color=0B2D59" alt="">
-                    </a>
-                    <a href="https://github.com/rafinha-adao/php-crud" target="_blank">
-                        <img src="https://github-readme-stats.vercel.app/api/pin/?username=rafinha-adao&repo=php-crud&title_color=0B2D59" alt="">
-                    </a>
+        <!--
+        <section class="works">
+            <h2>Serviços</h2>
+            <div class="container-works">
+                <div class="card-work">
+                    
                 </div>
             </div>
-            <div class="lang-stats-github">
-                <a href="https://github.com/rafinha-adao" target="_blank">
-                    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rafinha-adao&layout=compact&langs_count=6&bg_color=FFFFFF&locale=pt-br&title_color=0B2D59"/>
-                </a>
-            </div>
         </section>
-        <section class="projects" id="trabalhos">
-            < trabalhos feitos >
+        -->
+        <section class="studies" id="estudos">
+            <h2>Estudos e Projetos</h2>
+            <div class="studies-projects">
+                <div class="card-project">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" />
+                    <div class="description">
+                        <a href="https://github.com/rafinha-adao/vue-ecommmerce" target="_blank">
+                            <h4>vue-ecommmerce</h4>
+                        </a>
+                        <p>Vue e-commerce com vuex e vue-router</p>
+                    </div>
+                </div>
+                <div class="card-project">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg" />
+                    <div class="description">
+                        <a href="https://github.com/rafinha-adao/php-crud" target="_blank">
+                            <h4>php-crud</h4>
+                        </a>
+                        <p>Crud feito com PHP e MySQL</p>
+                    </div>
+                </div>
+                <div class="card-project">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" />
+                    <div class="description">
+                        <a href="https://github.com/rafinha-adao/rafinha-adao.github.io" target="_blank">
+                            <h4>rafinha-adao</h4>
+                        </a>
+                        <p>Meu site e portfólio pessoal</p>
+                    </div>
+                </div>
+                <div class="card-project">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-plain.svg" />
+                    <div class="description">
+                        <a href="https://github.com/rafinha-adao/angular-project" target="_blank">
+                            <h4>angular-project</h4>
+                        </a>
+                        <p>Projeto de aprendizado feito com Angular</p>
+                    </div>
+                </div>
+                <div class="card-project">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" />
+                    <div class="description">
+                        <a href="https://github.com/rafinha-adao/node-mongodb" target="_blank">
+                            <h4>node-mongodb</h4>
+                        </a>
+                        <p>API feita em NodeJs com conexão ao MongoDB</p>
+                    </div>
+                </div>
+                <div class="card-project">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" />
+                    <div class="description">
+                        <a href="https://github.com/rafinha-adao/app-java-jokenpo" target="_blank">
+                            <h4>app-java-jokenpo</h4>
+                        </a>
+                        <p>App do jogo Jokenpô feito em Java</p>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="contact" id="contato">
             <div class="container">
@@ -93,15 +130,18 @@
                 </a>
             </div>
         </section>
-        <section class="about-me">
-            <img src="./assets/img/profile-pixel-48px.png" alt="">
-            <p>
-                Aqui será uma breve descrição sobre mim, meus estudos e trabalhos recentes.
-            </p>
-        </section>
     </main>
     <footer>
-        
+        <img src="./assets/img/profile-pixel-48px.png" alt="">
+        <div class="social-media">
+            <a href="https://github.com/rafinha-adao" target="_blank">
+                <i class="bi bi-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/rafael-oliveira-adão" target="_blank">
+                <i class="bi bi-linkedin"></i>
+            </a>
+        </div>
+        <p>Desenvolvido por Rafael Adão e hospedado pelo GitHub.</p>
     </footer>
 
     <script src="./js/theme.js"></script>

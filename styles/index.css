@@ -12,6 +12,20 @@ body {
   background-color: var(--primaryColor);
 }
 
+body::-webkit-scrollbar {
+  width: 0.7rem;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--primaryColor);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--secondaryColor);
+  -webkit-box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+          box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
 body header nav {
   height: 3.5rem;
   background-color: var(--secondaryColor);
@@ -25,10 +39,12 @@ body header nav {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0.5rem 2rem;
+  -webkit-box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+          box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
 
 body header nav .logo {
-  max-width: 14rem;
+  max-width: 55rem;
   width: 90%;
   color: var(--fontColor);
 }
@@ -37,38 +53,11 @@ body header nav .logo span {
   font-size: 1.2rem;
   font-family: "Noto Sans Mono", monospace;
   font-weight: 800;
-}
-
-body header nav ul {
-  max-width: 32rem;
-  width: 90%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-body header nav ul li a {
-  color: var(--fontColor);
-  font-size: 1.125rem;
-  font-weight: 500;
-  margin: 0 0.2rem;
-  padding: 0.8rem;
-  border-radius: 0.5rem;
-}
-
-body header nav ul li a:hover {
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.15)), to(rgba(255, 255, 255, 0)));
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  background-color: var(--secondaryColor);
+  cursor: pointer;
 }
 
 body header nav .configs {
-  max-width: 14rem;
+  max-width: 5rem;
   width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -79,7 +68,7 @@ body header nav .configs {
 }
 
 body header nav .configs .button {
-  padding: 0.8rem 1.4rem;
+  padding: 0.8rem;
   background-color: var(--secondaryColor);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -121,6 +110,12 @@ body header nav .configs .theme {
   height: 1.5rem;
 }
 
+body header nav .configs .theme:hover i {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  color: var(--primaryColor);
+}
+
 body main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -149,13 +144,14 @@ body main .introduction {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin: 3rem 0;
   max-width: 60rem;
   width: 90%;
-  margin: 3rem 0 0 0;
 }
 
 body main .introduction .hello {
-  width: 30rem;
+  max-width: 30rem;
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -168,10 +164,19 @@ body main .introduction .hello {
           justify-content: center;
 }
 
+@media screen and (max-width: 1065px) {
+  body main .introduction .hello {
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 body main .introduction .hello h1 {
   font-family: "Noto Sans Mono", monospace;
   font-weight: 800;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   color: var(--fontColor);
 }
 
@@ -201,6 +206,12 @@ body main .introduction .hello .button:hover {
   opacity: 0.95;
 }
 
+body main .introduction .hello .button:hover span {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  color: var(--primaryColor);
+}
+
 body main .introduction .hello .button span {
   color: var(--fontColor);
   font-size: 1.125rem;
@@ -208,7 +219,8 @@ body main .introduction .hello .button span {
 }
 
 body main .introduction .media {
-  width: 30rem;
+  max-width: 30rem;
+  width: 90%;
   height: 25.625rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -221,21 +233,34 @@ body main .introduction .media {
           align-items: flex-start;
 }
 
+@media screen and (max-width: 1065px) {
+  body main .introduction .media {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 body main .studies {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   max-width: 60rem;
   width: 90%;
-  margin: 3rem 0 0 0;
+  margin: 3rem 0;
 }
 
 body main .studies h2 {
@@ -243,85 +268,63 @@ body main .studies h2 {
   font-weight: 700;
   color: var(--fontColor);
   margin: 0 0 2rem 0;
+  text-align: center;
 }
 
-body main .studies .repos-github {
+body main .studies .studies-projects {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 0 1.5rem 0;
-}
-
-body main .studies .repos-github .repos-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-body main .studies .repos-github .repos-container a {
+body main .studies .studies-projects .card-project {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0.2rem;
-}
-
-body main .studies .repos-github .repos-container a img {
-  max-height: 130em;
-  height: 90%;
-}
-
-body main .studies .lang-stats-github {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0 0 1.5rem 0;
+  width: 18rem;
+  height: 7rem;
+  color: var(--fontColor);
+  border-radius: 0.5rem;
+  margin: 0.5rem;
 }
 
-body main .studies .lang-stats-github a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+body main .studies .studies-projects .card-project img {
+  width: 3rem;
+  margin: 0 1rem;
 }
 
-body main .studies .lang-stats-github a img {
-  width: 30rem;
+body main .studies .studies-projects .card-project .description {
+  width: 13rem;
+  margin: 0 1rem 0 0;
+}
+
+body main .studies .studies-projects .card-project .description a h4 {
+  font-family: "Noto Sans Mono", monospace;
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--fontColor);
+}
+
+body main .contact {
+  margin: 3rem 0;
 }
 
 body main .contact .container {
-  width: 26rem;
-  height: 32rem;
+  width: 24rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -338,13 +341,24 @@ body main .contact .container {
   background-color: var(--secondaryColor);
   border-radius: 0.5rem;
   margin: 1rem;
+  -webkit-box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+          box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  padding: 1.5rem 0.5rem;
+}
+
+@media screen and (max-width: 375px) {
+  body main .contact .container {
+    width: 16rem;
+  }
 }
 
 body main .contact .container h3 {
   color: var(--fontColor);
   font-size: 1.2rem;
   font-weight: 700;
-  margin: 1rem 0;
+  margin: 0 0 1rem 0;
+  padding: 0 1rem;
+  text-align: center;
 }
 
 body main .contact .container form {
@@ -374,6 +388,12 @@ body main .contact .container form input, body main .contact .container form tex
   resize: none;
   font-size: 1rem;
   caret-color: var(--secondaryColor);
+}
+
+@media screen and (max-width: 375px) {
+  body main .contact .container form input, body main .contact .container form textarea {
+    width: 12rem;
+  }
 }
 
 body main .contact .container form input[type=submit], body main .contact .container form textarea[type=submit] {
@@ -439,25 +459,60 @@ body main .contact .container .button {
   font-weight: 700;
 }
 
-body main .about-me {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  max-width: 60rem;
-  width: 90%;
-  margin: 3rem 0 0 0;
+body main .contact .container .button:hover {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  opacity: 0.95;
 }
 
 body footer {
-  height: 10rem;
   background-color: var(--secondaryColor);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  margin: 3rem 0 0 0;
+  -webkit-box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+          box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+body footer .social-media {
+  margin: 0 0 1rem 0;
+}
+
+body footer .social-media a {
+  color: var(--fontColor);
+  margin: 0 0.4rem;
+}
+
+body footer .social-media a:hover {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  color: var(--primaryColor);
+}
+
+body footer .social-media a i {
+  font-size: 1.8rem;
+}
+
+body footer img {
+  width: 8rem;
+  height: 8rem;
+  margin: 0 0 1rem 0;
+}
+
+body footer p {
+  color: var(--fontColor);
+  text-align: center;
 }
 /*# sourceMappingURL=index.css.map */
