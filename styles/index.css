@@ -181,7 +181,6 @@ body main .introduction .hello h1 {
 }
 
 body main .introduction .hello .button {
-  width: 10rem;
   height: 3.1rem;
   margin: 2.5rem 1rem 1rem 0;
   background-color: var(--secondaryColor);
@@ -307,9 +306,9 @@ body main .works .container-works .card-work h4 {
 }
 
 body main .works .button {
-  width: 10rem;
   height: 3.1rem;
-  margin: 2.5rem 1rem 1rem 0;
+  width: 12rem;
+  margin: 2.5rem 0;
   background-color: var(--secondaryColor);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -323,7 +322,6 @@ body main .works .button {
   border-radius: 0.5rem;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.15)), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  width: 12rem;
 }
 
 body main .works .button span {
@@ -408,9 +406,9 @@ body main .studies .studies-projects .card-project .description a h4 {
 }
 
 body main .studies .button {
-  width: 10rem;
   height: 3.1rem;
-  margin: 2.5rem 1rem 1rem 0;
+  width: 12rem;
+  margin: 2.5rem 0;
   background-color: var(--secondaryColor);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -424,7 +422,6 @@ body main .studies .button {
   border-radius: 0.5rem;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.15)), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  width: 12rem;
   color: var(--fontColor);
   font-size: 1.125rem;
   font-weight: 700;
