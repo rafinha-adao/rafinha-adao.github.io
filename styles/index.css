@@ -1,626 +1,400 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@500;800&family=Open+Sans:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Ubuntu:wght@300;400;500;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   text-decoration: none;
   list-style: none;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: var(--primaryColor);
+  background-color: var(--primary-color);
 }
-
 body::-webkit-scrollbar {
   width: 0.7rem;
 }
-
 body::-webkit-scrollbar-track {
-  background-color: var(--primaryColor);
+  background-color: var(--primary-color);
 }
-
 body::-webkit-scrollbar-thumb {
-  background-color: var(--secondaryColor);
-  -webkit-box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
-          box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  background-color: var(--secondary-color);
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
-
 body header nav {
   height: 3.5rem;
-  background-color: var(--secondaryColor);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  background-color: var(--secondary-color);
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   padding: 0.5rem 2rem;
-  -webkit-box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
-          box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
-
 body header nav .logo {
   max-width: 55rem;
   width: 90%;
-  color: var(--fontColor);
+  color: var(--font-color);
 }
-
 body header nav .logo span {
   font-size: 1.2rem;
-  font-family: "Noto Sans Mono", monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 800;
   cursor: pointer;
 }
-
 body header nav .configs {
   max-width: 5rem;
   width: 90%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
 }
-
 body header nav .configs .button {
   padding: 0.8rem;
-  background-color: var(--secondaryColor);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  background-color: var(--secondary-color);
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-radius: 0.5rem;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.15)), to(rgba(255, 255, 255, 0)));
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   margin: 0 0.2rem;
   cursor: pointer;
   width: 12rem;
 }
-
 body header nav .configs .button:hover {
-  -webkit-transition: 0.2s;
   transition: 0.2s;
   opacity: 0.95;
 }
-
 body header nav .configs .button span {
-  color: var(--fontColor);
+  color: var(--font-color);
   font-size: 1.125rem;
   font-weight: 700;
 }
-
 body header nav .configs .button i {
-  color: var(--fontColor);
+  color: var(--font-color);
   font-size: 1.2rem;
   position: absolute;
 }
-
 body header nav .configs .theme {
   width: 1.5rem;
   height: 1.5rem;
 }
-
 body header nav .configs .theme:hover i {
-  -webkit-transition: 0.2s;
   transition: 0.2s;
-  color: var(--primaryColor);
+  color: var(--primary-color);
 }
-
 body main {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-
 body main .introduction {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   margin: 3rem 0;
   max-width: 60rem;
   width: 90%;
 }
-
 body main .introduction .hello {
   max-width: 30rem;
   width: 90%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
 }
-
 @media screen and (max-width: 1065px) {
   body main .introduction .hello {
     text-align: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
+  }
+  body main .introduction .hello .button {
+    margin: 2.5rem 0;
   }
 }
-
 body main .introduction .hello h1 {
-  font-family: "Noto Sans Mono", monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 800;
   font-size: 2.5rem;
-  color: var(--fontColor);
+  color: var(--font-color);
 }
-
 body main .introduction .hello .button {
   height: 3.1rem;
   margin: 2.5rem 1rem 1rem 0;
-  background-color: var(--secondaryColor);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  background-color: var(--secondary-color);
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-radius: 0.5rem;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.15)), to(rgba(255, 255, 255, 0)));
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   width: 12rem;
 }
-
 body main .introduction .hello .button span {
-  color: var(--fontColor);
+  color: var(--font-color);
   font-size: 1.125rem;
   font-weight: 700;
 }
-
 body main .introduction .media {
   max-width: 30rem;
   width: 90%;
   height: 25.625rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
-
 @media screen and (max-width: 1065px) {
   body main .introduction .media {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
   }
 }
-
 body main .works {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   max-width: 60rem;
   width: 90%;
   margin: 1rem 0 4rem 0;
 }
-
 body main .works h2 {
   font-size: 2rem;
   font-weight: 700;
-  color: var(--fontColor);
+  color: var(--font-color);
   margin: 0 0 2rem 0;
   text-align: center;
 }
-
 body main .works .container-works {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-
 body main .works .container-works .card-work {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 12rem;
   height: 16rem;
-  color: var(--fontColor);
-  border-radius: 0.5rem;
+  color: var(--font-color);
+  border-radius: 0.25rem;
   margin: 0.5rem;
   text-align: center;
   padding: 0.5rem;
 }
-
 body main .works .container-works .card-work i {
-  color: var(--fontColor);
+  color: var(--font-color);
   font-size: 4.5rem;
 }
-
 body main .works .container-works .card-work h4 {
   margin: 0.5rem 0;
   font-size: 1.125rem;
 }
-
 body main .works .button {
   height: 3.1rem;
   width: 12rem;
   margin: 2.5rem 0;
-  background-color: var(--secondaryColor);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  background-color: var(--secondary-color);
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-radius: 0.5rem;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.15)), to(rgba(255, 255, 255, 0)));
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
 }
-
 body main .works .button span {
-  color: var(--fontColor);
+  color: var(--font-color);
   font-size: 1.125rem;
   font-weight: 700;
 }
-
 body main .studies {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   max-width: 60rem;
   width: 90%;
   margin: 3rem 0 4rem 0;
 }
-
 body main .studies h2 {
   font-size: 2rem;
   font-weight: 700;
-  color: var(--fontColor);
+  color: var(--font-color);
   margin: 0 0 2rem 0;
   text-align: center;
 }
-
 body main .studies .studies-projects {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-
 body main .studies .studies-projects .card-project {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   width: 18rem;
   height: 7rem;
-  color: var(--fontColor);
-  border-radius: 0.5rem;
+  color: var(--font-color);
+  border-radius: 0.25rem;
   margin: 0.5rem;
 }
-
 body main .studies .studies-projects .card-project img {
   width: 3rem;
   margin: 0 1rem;
 }
-
 body main .studies .studies-projects .card-project .description {
   width: 13rem;
   margin: 0 1rem 0 0;
 }
-
 body main .studies .studies-projects .card-project .description a h4 {
-  font-family: "Noto Sans Mono", monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 800;
   font-size: 1rem;
-  color: var(--fontColor);
+  color: var(--font-color);
 }
-
 body main .studies .button {
   height: 3.1rem;
   width: 12rem;
   margin: 2.5rem 0;
-  background-color: var(--secondaryColor);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  background-color: var(--secondary-color);
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-radius: 0.5rem;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.15)), to(rgba(255, 255, 255, 0)));
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  color: var(--fontColor);
+  color: var(--font-color);
   font-size: 1.125rem;
   font-weight: 700;
 }
-
 body main .contact {
   margin: 3rem 0;
 }
-
 body main .contact .container {
   width: 24rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: var(--secondaryColor);
-  border-radius: 0.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
+  border-radius: 0.25rem;
   margin: 0.5rem;
-  -webkit-box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
-          box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
   padding: 1.5rem 0.5rem;
 }
-
 @media screen and (max-width: 375px) {
   body main .contact .container {
     width: 16rem;
   }
 }
-
 body main .contact .container h3 {
-  color: var(--fontColor);
+  color: var(--font-color);
   font-size: 1.2rem;
   font-weight: 700;
   margin: 0.5rem 0 1.5rem 0;
   padding: 0 1rem;
   text-align: center;
 }
-
 body main .contact .container form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
 body main .contact .container form input, body main .contact .container form textarea {
   border: 0.125rem solid var(--tertiaryColor);
   outline: none;
   width: 15rem;
   height: 2.2rem;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
   padding: 0.5rem 0.8rem;
   margin: 0.2rem 0;
   resize: none;
   font-size: 1rem;
-  caret-color: var(--secondaryColor);
+  caret-color: var(--secondary-color);
 }
-
 @media screen and (max-width: 375px) {
   body main .contact .container form input, body main .contact .container form textarea {
     width: 12rem;
   }
 }
-
 body main .contact .container form input[type=submit], body main .contact .container form textarea[type=submit] {
   border: none;
   margin: 1.2rem 0;
   width: 12rem;
   height: 3.1rem;
   background-color: var(--primaryColor);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-radius: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
   cursor: pointer;
-  color: var(--fontColor);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.15)), to(rgba(255, 255, 255, 0)));
+  color: var(--font-color);
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   font-size: 1.125rem;
   font-weight: 700;
 }
-
 body main .contact .container form input[type=submit]:hover, body main .contact .container form textarea[type=submit]:hover {
-  -webkit-transition: 0.2s;
   transition: 0.2s;
   opacity: 0.95;
 }
-
 body main .contact .container form textarea {
   height: 6rem;
 }
-
 body main .contact .container p {
-  color: var(--fontColor);
+  color: var(--font-color);
   text-align: center;
 }
-
 body main .contact .container .button {
   border: none;
   margin: 1rem 0;
   width: 12rem;
   height: 3.1rem;
   background-color: #25D366;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-radius: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
   cursor: pointer;
-  color: var(--fontColor);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.15)), to(rgba(255, 255, 255, 0)));
+  color: var(--font-color);
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   font-size: 1.125rem;
   font-weight: 700;
 }
-
 body main .contact .container .button:hover {
-  -webkit-transition: 0.2s;
   transition: 0.2s;
   opacity: 0.95;
 }
-
 body footer {
-  background-color: var(--secondaryColor);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  background-color: var(--secondary-color);
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 1rem;
   margin: 3rem 0 0 0;
-  -webkit-box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
-          box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
-
 body footer .social-media {
   margin: 0 0 1rem 0;
 }
-
 body footer .social-media a {
-  color: var(--fontColor);
+  color: var(--font-color);
   margin: 0 0.4rem;
 }
-
 body footer .social-media a:hover {
-  -webkit-transition: 0.4s;
   transition: 0.4s;
   color: var(--primaryColor);
 }
-
 body footer .social-media a i {
   font-size: 1.8rem;
 }
-
 body footer img {
   width: 8rem;
   height: 8rem;
   margin: 0 0 1rem 0;
 }
-
 body footer p {
-  color: var(--fontColor);
+  color: var(--font-color);
   text-align: center;
-}
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

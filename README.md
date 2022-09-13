@@ -1,5 +1,5 @@
 # rafinha-adao.github.io
 
-#### Projeto de portifólio pessoal hospedado no Github
+### Projeto de portifólio pessoal hospedado no Github
 
-Ainda em construção <h3>🏗</h3>
+Sempre em construção <h3>🏗</h3>

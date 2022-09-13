@@ -5,26 +5,26 @@
     padding: 0
     text-decoration: none
     list-style: none
-    font-family: $openSans
+    font-family: $primary-font
     scroll-behavior: smooth
 
 body
-    background-color: var(--primaryColor)
+    background-color: var(--primary-color)
     &::-webkit-scrollbar
         width: 0.7rem
 
     &::-webkit-scrollbar-track
-        background-color: var(--primaryColor)
+        background-color: var(--primary-color)
 
     &::-webkit-scrollbar-thumb
-        background-color: var(--secondaryColor)
+        background-color: var(--secondary-color)
         box-shadow: $shadow
 
     header
 
         nav
             height: 3.5rem
-            background-color: var(--secondaryColor)
+            background-color: var(--secondary-color)
             display: flex
             align-items: center
             justify-content: center
@@ -34,11 +34,11 @@ body
             .logo
                 max-width: 55rem
                 width: 90%
-                color: var(--fontColor)
+                color: var(--font-color)
 
                 span
                     font-size: 1.2rem
-                    font-family: $sansMono
+                    font-family: $secondary-font
                     font-weight: 800
                     cursor: pointer
 
@@ -50,12 +50,12 @@ body
 
                 .button
                     padding: 0.8rem
-                    background-color: var(--secondaryColor)
+                    background-color: var(--secondary-color)
                     display: flex
                     align-items: center
                     justify-content: center
-                    border-radius: 0.5rem
-                    background-image: $gradientButton
+                    border-radius: 0.25rem
+                    background-image: $gradient-button
                     margin: 0 0.2rem
                     cursor: pointer
                     width: 12rem
@@ -65,12 +65,12 @@ body
                         opacity: 0.95
 
                     span
-                        color: var(--fontColor)
+                        color: var(--font-color)
                         font-size: 1.125rem
                         font-weight: 700
 
                     i
-                        color: var(--fontColor)
+                        color: var(--font-color)
                         font-size: 1.2rem
                         position: absolute
 
@@ -81,7 +81,7 @@ body
                     &:hover
                         i
                             transition: 0.2s
-                            color: var(--primaryColor)
+                            color: var(--primary-color)
 
     main
         display: flex
@@ -113,24 +113,24 @@ body
                         margin: 2.5rem 0
                         
                 h1
-                    font-family: $sansMono
+                    font-family: $secondary-font
                     font-weight: 800
                     font-size: 2.5rem
-                    color: var(--fontColor)
+                    color: var(--font-color)
 
                 .button
                     height: 3.1rem
                     margin: 2.5rem 1rem 1rem 0
-                    background-color: var(--secondaryColor)
+                    background-color: var(--secondary-color)
                     display: flex
                     align-items: center
                     justify-content: center
-                    border-radius: 0.5rem
-                    background-image: $gradientButton
+                    border-radius: 0.25rem
+                    background-image: $gradient-button
                     width: 12rem
 
                     span
-                        color: var(--fontColor)
+                        color: var(--font-color)
                         font-size: 1.125rem
                         font-weight: 700
                 
@@ -158,7 +158,7 @@ body
             h2
                 font-size: 2rem
                 font-weight: 700
-                color: var(--fontColor)
+                color: var(--font-color)
                 margin: 0 0 2rem 0
                 text-align: center
 
@@ -175,14 +175,14 @@ body
                     flex-direction: column
                     width: 12rem
                     height: 16rem
-                    color: var(--fontColor)
-                    border-radius: 0.5rem
+                    color: var(--font-color)
+                    border-radius: 0.25rem
                     margin: 0.5rem
                     text-align: center
                     padding: 0.5rem
 
                     i
-                        color: var(--fontColor)
+                        color: var(--font-color)
                         font-size: 4.5rem
 
                     h4
@@ -193,15 +193,15 @@ body
                 height: 3.1rem
                 width: 12rem
                 margin: 2.5rem 0
-                background-color: var(--secondaryColor)
+                background-color: var(--secondary-color)
                 display: flex
                 align-items: center
                 justify-content: center
-                border-radius: 0.5rem
-                background-image: $gradientButton
+                border-radius: 0.25rem
+                background-image: $gradient-button
 
                 span
-                    color: var(--fontColor)
+                    color: var(--font-color)
                     font-size: 1.125rem
                     font-weight: 700
                
@@ -217,7 +217,7 @@ body
             h2
                 font-size: 2rem
                 font-weight: 700
-                color: var(--fontColor)
+                color: var(--font-color)
                 margin: 0 0 2rem 0
                 text-align: center
 
@@ -233,8 +233,8 @@ body
                     justify-content: center
                     width: 18rem
                     height: 7rem
-                    color: var(--fontColor)
-                    border-radius: 0.5rem
+                    color: var(--font-color)
+                    border-radius: 0.25rem
                     margin: 0.5rem
 
                     img
@@ -247,22 +247,22 @@ body
 
                         a
                             h4
-                                font-family: $sansMono
+                                font-family: $secondary-font
                                 font-weight: 800
                                 font-size: 1rem
-                                color: var(--fontColor)
+                                color: var(--font-color)
 
             .button
                 height: 3.1rem
                 width: 12rem
                 margin: 2.5rem 0
-                background-color: var(--secondaryColor)
+                background-color: var(--secondary-color)
                 display: flex
                 align-items: center
                 justify-content: center
-                border-radius: 0.5rem
-                background-image: $gradientButton
-                color: var(--fontColor)
+                border-radius: 0.25rem
+                background-image: $gradient-button
+                color: var(--font-color)
                 font-size: 1.125rem
                 font-weight: 700
 
@@ -275,8 +275,8 @@ body
                 flex-direction: column
                 justify-content: center
                 align-items: center
-                background-color: var(--secondaryColor)
-                border-radius: 0.5rem
+                background-color: var(--secondary-color)
+                border-radius: 0.25rem
                 margin: 0.5rem
                 box-shadow: $shadow
                 padding: 1.5rem 0.5rem
@@ -285,7 +285,7 @@ body
                     width: 16rem
 
                 h3
-                    color: var(--fontColor)
+                    color: var(--font-color)
                     font-size: 1.2rem
                     font-weight: 700
                     margin: 0.5rem 0 1.5rem 0
@@ -303,12 +303,12 @@ body
                         outline: none
                         width: 15rem
                         height: 2.2rem
-                        border-radius: 0.5rem
+                        border-radius: 0.25rem
                         padding: 0.5rem 0.8rem
                         margin: 0.2rem 0
                         resize: none
                         font-size: 1rem
-                        caret-color: var(--secondaryColor)
+                        caret-color: var(--secondary-color)
 
                         @media screen and (max-width: 375px)
                             width: 12rem
@@ -322,10 +322,10 @@ body
                             display: flex
                             align-items: center
                             justify-content: center
-                            border-radius: 0.5rem
+                            border-radius: 0.25rem
                             cursor: pointer
-                            color: var(--fontColor)
-                            background-image: $gradientButton
+                            color: var(--font-color)
+                            background-image: $gradient-button
                             font-size: 1.125rem
                             font-weight: 700
 
@@ -337,7 +337,7 @@ body
                         height: 6rem
 
                 p
-                    color: var(--fontColor)
+                    color: var(--font-color)
                     text-align: center
 
                 .button
@@ -349,10 +349,10 @@ body
                     display: flex
                     align-items: center
                     justify-content: center
-                    border-radius: 0.5rem
+                    border-radius: 0.25rem
                     cursor: pointer
-                    color: var(--fontColor)
-                    background-image: $gradientButton
+                    color: var(--font-color)
+                    background-image: $gradient-button
                     font-size: 1.125rem
                     font-weight: 700
 
@@ -361,7 +361,7 @@ body
                         opacity: 0.95
 
     footer
-        background-color: var(--secondaryColor)
+        background-color: var(--secondary-color)
         display: flex
         flex-direction: column
         justify-content: center
@@ -374,7 +374,7 @@ body
             margin: 0 0 1rem 0
 
             a
-                color: var(--fontColor)
+                color: var(--font-color)
                 margin: 0 0.4rem
 
                 &:hover
@@ -390,6 +390,6 @@ body
             margin: 0 0 1rem 0
 
         p
-            color: var(--fontColor)
+            color: var(--font-color)
             text-align: center
         
