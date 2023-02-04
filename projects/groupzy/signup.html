@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/env.js"></script>
+    <script src="assets/js/isLogged.js"></script>
+    <title>Cadastro | Groupzy</title>
+</head>
+
+<body>
+    <main class="container-signup">
+        <form method="POST" id="signup">
+            <h1>Cadastro</h1>
+            <div class="input-container">
+                <label>Nome completo</label>
+                <input type="text" name="name" required>
+            </div>
+            <div class="input-container">
+                <label>Usuário</label>
+                <input type="text" name="tagName" required>
+            </div>
+            <div class="input-container">
+                <label>Data de nascimento</label>
+                <input type="date" name="birthday" required>
+            </div>
+            <div class="input-container">
+                <label>E-mail</label>
+                <input type="email" name="email" required>
+            </div>
+            <div class="input-container">
+                <label>Senha</label>
+                <input type="password" name="pass" required>
+            </div>
+            <div class="input-container">
+                <label>Bio</label>
+                <textarea name="bio" maxlength="150" required></textarea>
+            </div>
+            <div class="btn-container">
+                <button type="submit" id="btn-signup">Começar</button>
+            </div>
+            <p>Já tem uma conta? <a href="login.html">Faça o login</a></p>
+        </form>
+    </main>
+    <script>
+        $('#signup').submit(function (e) {
+            $('#btn-signup').attr("disabled", true);
+            $('#btn-signup').html('<img src="assets/img/spinner-loading.svg">');
+            $('#btn-signup').css({
+                'padding': '0',
+                'display': 'flex',
+                'align-content': 'center',
+                'justify-content': 'center'
+            });
+            e.preventDefault();
+            var data = $(this).serialize();
+            $.ajax({
+                type: "POST",
+                url: API_URL + 'users.php',
+                data: data,
+                success: function (res) {
+                    if (res.status == 1) {
+                        window.location = 'login.html';
+                    } else {
+                        alert('Erro ao fazer cadastro!');
+                        $('#btn-signup').css({
+                            'padding': '1rem 0',
+                            'display': 'block'
+                        });
+                        $('#btn-signup').attr("disabled", false);
+                        $('#btn-signup').html('Começar');
+                    };
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

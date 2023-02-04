@@ -1,0 +1,58 @@
+header {
+    padding: 1.5rem 0;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: $color-navy;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.125);
+
+    nav {
+        .cols-2 {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .mobile-button-menu {
+            @include screen-md {
+                display: none;
+            }
+        }
+
+        .container-logo {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            font-family: 'Fira Code', monospace;
+            font-weight: 700;
+
+            img {
+                width: 1.5rem;
+            }
+        }
+
+        ul {
+            display: none;
+
+            @include screen-md {
+                display: flex;
+                justify-content: end;
+                gap: 1rem;
+            }
+
+
+            a {
+                color: $font-color;
+
+                &:hover {
+                    color: $font-color-secondary;
+                    transition: .25s;
+                }
+
+                &:focus {
+                    text-decoration: underline;
+                    outline: none;
+                }
+            }
+
+
+        }
+    }
+}

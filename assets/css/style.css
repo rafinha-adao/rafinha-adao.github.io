@@ -1,0 +1,258 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #1B262C;
+  color: white;
+}
+
+body::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #1B262C;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #0F4C75;
+}
+
+section {
+  padding: 3rem 0;
+}
+
+article {
+  display: grid;
+  align-content: space-between;
+  gap: 2rem;
+}
+
+button {
+  width: 100%;
+  border: none;
+  border-radius: 0.125rem;
+  padding: 0.725rem 0;
+  color: #f4f4f4;
+  cursor: pointer;
+  background: #0F4C75;
+  background: linear-gradient(0deg, #0F4C75 0%, #3282B8 100%);
+  font-size: 1rem;
+  font-weight: 600;
+}
+button:hover {
+  opacity: 0.9;
+  transition: 0.25s;
+  outline: 0.2rem solid #0F4C75;
+}
+button:active {
+  opacity: 0.8;
+}
+button:focus {
+  outline: 0.2rem solid #0F4C75;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+h2 {
+  margin-bottom: 1.25rem;
+}
+
+p,
+span {
+  color: #d6d6d6;
+}
+
+.container {
+  max-width: 70rem;
+  margin-inline: auto;
+  padding: 0 1rem;
+}
+
+.cols-1 {
+  display: grid;
+  gap: 1rem;
+}
+
+.cols-2 {
+  display: grid;
+  gap: 3rem;
+}
+@media (min-width: 768px) {
+  .cols-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.cols-3 {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .cols-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.cols-4 {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .cols-4 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1024px) {
+  .cols-4 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.card {
+  padding: 2rem;
+  border-radius: 0.125rem;
+  backdrop-filter: blur(1rem) saturate(180%);
+  -webkit-backdrop-filter: blur(1rem) saturate(180%);
+  background-color: #343A40;
+  border: 0.125rem solid rgba(255, 255, 255, 0.125);
+}
+
+.icon {
+  font-size: 1rem;
+}
+
+header {
+  padding: 1.5rem 0;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: #0F4C75;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.125);
+}
+header nav .cols-2 {
+  grid-template-columns: 1fr 1fr;
+}
+@media (min-width: 768px) {
+  header nav .mobile-button-menu {
+    display: none;
+  }
+}
+header nav .container-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Fira Code", monospace;
+  font-weight: 700;
+}
+header nav .container-logo img {
+  width: 1.5rem;
+}
+header nav ul {
+  display: none;
+}
+@media (min-width: 768px) {
+  header nav ul {
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+  }
+}
+header nav ul a {
+  color: #f4f4f4;
+}
+header nav ul a:hover {
+  color: #d6d6d6;
+  transition: 0.25s;
+}
+header nav ul a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+#hero .zdog-canvas {
+  margin-inline: auto;
+}
+
+#about .text-about-me {
+  text-align: center;
+  display: grid;
+  gap: 0.5rem;
+}
+#about img.card {
+  margin-inline: auto;
+  padding: 0;
+  width: 8rem;
+  height: 8rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+#about .icon {
+  padding: 0.65rem 0;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#about h3 {
+  margin-inline: auto;
+}
+#about form {
+  display: grid;
+  align-content: space-between;
+  gap: 1rem;
+}
+#about form textarea {
+  resize: none;
+  margin-bottom: 0.5rem;
+  height: 8rem;
+}
+#about form textarea,
+#about form input {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  outline: none;
+  padding: 0.7rem 0.9rem;
+  border: 0.125rem solid rgba(255, 255, 255, 0.125);
+  border-radius: 0.125rem;
+  background-color: #343A40;
+  color: #f4f4f4;
+  caret-color: #0F4C75;
+}
+#about form textarea:hover, #about form textarea:focus, #about form textarea:active,
+#about form input:hover,
+#about form input:focus,
+#about form input:active {
+  opacity: 0.8;
+  transition: 0.25s;
+  outline: 0.2rem solid #0F4C75;
+  border-color: #343A40;
+}
+#about form input:-webkit-autofill,
+#about form input:-webkit-autofill:hover,
+#about form input:-webkit-autofill:focus,
+#about form input:-webkit-autofill:active {
+  transition: background-color 9999s ease-in-out 0s;
+  -webkit-text-fill-color: #f4f4f4;
+}
+
+footer {
+  padding: 1.5rem 0;
+  text-align: center;
+  border-radius: 0.125rem;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: #0F4C75;
+  border-top: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+/*# sourceMappingURL=style.css.map */

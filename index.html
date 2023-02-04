@@ -1,173 +1,185 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="theme-light">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Description -->
+    <meta name="description"
+        content="Olá me chamo Rafael e esse é o meu site/portfólio como desenvolvedor, faço trabalhos freelancers e posso te ajudar a dar vida as suas ideias e projetos!">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;700&family=Roboto:wght@100;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Favicon -->
     <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
 
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/theme.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- CDN Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <title>Rafael Adão</title>
 </head>
-<body id="theme">
+
+<body>
+
     <header>
-        <nav>
-            <div class="logo">
-                <<span>Rafael Adão</span>/>
-            </div>
-            <ul>
-                
-            </ul>
-            <div class="configs">
-                <a class="button theme" onclick="changeTheme()">
-                    <i class="bi bi-brightness-high light"></i>
-                    <i class="bi bi-moon dark"></i>
-                </a>
+        <nav class="container">
+            <div class="cols-2">
+                <div class="container-logo">
+                    <img src="assets/img/favicon.ico" alt="Rafael Adão">
+                    Rafael Adão
+                </div>
             </div>
         </nav>
     </header>
-    <main>
-        <section class="introduction">
-            <div class="hello">
-                <h1>
-                    Olá, me chamo Rafael e sou estudante de programação
-                </h1>
-                <a href="#contato" class="button">
-                    <span>Fale Comigo</span>
-                </a>
-            </div>
-            <div class="media">
-                <canvas class="zdog-canvas" width="320" height="290"></canvas>
-            </div>
-        </section>
-        <section class="works">
-            <h2>Serviços</h2>
-            <div class="container-works">
-                <div class="card-work">
-                    <i class="bi bi-window-sidebar"></i>
-                    <h4>Landing page</h4>
-                    <p>Criação de site para apresentação de uma empresa e seus produtos ou até cursos.</p>
-                </div>
-                <div class="card-work">
-                    <i class="bi bi-shop"></i>
-                    <h4>Loja online</h4>
-                    <p>Criação de um e-commerce próprio para vendas de qualquer tipo de produto.</p>
-                </div>
-                <div class="card-work">
-                    <i class="bi bi-layout-wtf"></i>
-                    <h4>Design UI</h4>
-                    <p>Todo site ou aplicação precisa de um layout responsivo, bonito e prático para o usuário.</p>
-                </div>
-                <div class="card-work">
-                    <i class="bi bi-pc-display"></i>
-                    <h4>T.I</h4>
-                    <p>Serviços de T.I básicos como instalações de sistemas operacionais, formatação e limpeza.</p>
-                </div>
-            </div>
-            <a href="#contato" class="button">
-                <span>Contratar</span>
-            </a>
-        </section>
-        <section class="studies" id="estudos">
-            <h2>Estudos e Projetos</h2>
-            <div class="studies-projects">
-                <div class="card-project">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" />
-                    <div class="description">
-                        <a href="https://github.com/rafinha-adao/vue-ecommmerce" target="_blank">
-                            <h4>vue-ecommmerce</h4>
-                        </a>
-                        <p>Vue e-commerce com vuex e vue-router</p>
-                    </div>
-                </div>
-                <div class="card-project">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg" />
-                    <div class="description">
-                        <a href="https://github.com/rafinha-adao/php-crud" target="_blank">
-                            <h4>php-crud</h4>
-                        </a>
-                        <p>Crud feito com PHP e MySQL</p>
-                    </div>
-                </div>
-                <div class="card-project">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" />
-                    <div class="description">
-                        <a href="https://github.com/rafinha-adao/rafinha-adao.github.io" target="_blank">
-                            <h4>rafinha-adao</h4>
-                        </a>
-                        <p>Esse meu site e portfólio pessoal</p>
-                    </div>
-                </div>
-                <div class="card-project">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-plain.svg" />
-                    <div class="description">
-                        <a href="https://github.com/rafinha-adao/angular-project" target="_blank">
-                            <h4>angular-project</h4>
-                        </a>
-                        <p>Projeto de aprendizado feito com Angular</p>
-                    </div>
-                </div>
-                <div class="card-project">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" />
-                    <div class="description">
-                        <a href="https://github.com/rafinha-adao/node-mongodb" target="_blank">
-                            <h4>node-mongodb</h4>
-                        </a>
-                        <p>API feita em NodeJs com conexão ao MongoDB</p>
-                    </div>
-                </div>
-                <div class="card-project">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" />
-                    <div class="description">
-                        <a href="https://github.com/rafinha-adao/app-java-jokenpo" target="_blank">
-                            <h4>app-java-jokenpo</h4>
-                        </a>
-                        <p>App do jogo Jokenpô feito em Java</p>
-                    </div>
-                </div>
-            </div>
-            <a href="https://github.com/rafinha-adao" target="_blank" class="button">
-                <i class="bi bi-github"></i>
-            </a>
-        </section>
-        <section class="contact" id="contato">
-            <div class="container">
-                <h3>Me mande uma mensagem :)</h3>
-                <form method="POST" action="https://formsubmit.co/ec129e5d7ad184c989f403e1a53adc8c">
-                    <input type="hidden" name="_next" value="https://rafinha-adao.github.io/email-sent.html">
-                    <input type="hidden" name="_subject" value="Nova Mensagem do Portfólio!">
 
-                    <input type="text" name="Nome" placeholder="Nome" required>
-                    <input type="email" name="Email" placeholder="Email" required>
-                    <textarea name="Mensagem" placeholder="Mensagem" maxlength="100" required></textarea>
-                    <input type="submit" value="Enviar">
-                </form>
-                <p>ou</p>
-                <a class="button" href="https://wa.me/5519995827504?text=Olá%20Rafael,%20tudo%20bem?" target="_blank">
-                    <i class="bi bi-whatsapp"></i>
-                </a>
+    <main>
+
+        <section id="hero">
+            <div class="container">
+                <div class="cols-2">
+                    <article>
+                        <div>
+                            <h1>
+                                Olá! me chamo Rafael, sou desenvolvedor e estudante de tecnologia.
+                            </h1>
+                            <p>
+                                Posso ajudar você a tirar suas ideias do papel e transformá-las em um projeto real. E
+                                aí, que tal? É só falar comigo!
+                            </p>
+                        </div>
+                        <button onclick="location = '#about'">Fale comigo</button>
+                    </article>
+                    <canvas class="zdog-canvas" width="320" height="290"></canvas>
+
+                </div>
             </div>
         </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2>Projetos</h2>
+                <div class="cols-3">
+                    <article class="card">
+                        project 1
+                    </article>
+                    <article class="card">
+                        project 2
+                    </article>
+                    <article class="card">
+                        project 3
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!--
+        <section id="experiences"></section> 
+        -->
+
+        <section id="services">
+            <div class="container">
+                <h2>Serviços</h2>
+                <div class="cols-3">
+                    <article class="card">
+                        service 1
+                    </article>
+                    <article class="card">
+                        service 2
+                    </article>
+                    <article class="card">
+                        service 3
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container">
+                <h2>Conhecimentos</h2>
+                <div class="cols-4">
+                    <article class="card">
+                        skill 1
+                    </article>
+                    <article class="card">
+                        skill 2
+                    </article>
+                    <article class="card">
+                        skill 3
+                    </article>
+                    <article class="card">
+                        skill 4
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2>Fale comigo!</h2>
+                <div class="cols-2 card">
+                    <form action="" method="POST">
+                        <input type="text" name="name" id="name" placeholder="Digite seu nome" maxlength="80">
+                        <input type="email" name="email" id="email" placeholder="Digite seu e-mail" maxlength="80">
+                        <textarea name="_message" id="message" placeholder="Digite sua mensagem"
+                            maxlength="240"></textarea>
+
+                        <button type="submit">Enviar</button>
+                    </form>
+                    <article>
+                        <img class="card" src="assets/img/about-me.jpg" alt="Eu">
+                        <div class="text-about-me">
+                            <h3>Rafael de Oliveira Adão</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </div>
+                        <div class="group-social-links cols-3">
+                            <div>
+                                <button
+                                    onclick="openInNewTab('https://wa.me/19995827504?text=Ol%C3%A1%20Rafael,%20tudo%20bem?%20Vim%20pelo%20seu%20portf%C3%B3lio!')"
+                                    class="icon">
+                                    <ion-icon name="logo-whatsapp"></ion-icon>
+                                </button>
+                            </div>
+                            <div>
+                                <button onclick="openInNewTab('https://github.com/rafinha-adao')" class="icon">
+                                    <ion-icon name="logo-github"></ion-icon>
+                                </button>
+                            </div>
+                            <div>
+                                <button onclick="openInNewTab('https://www.linkedin.com/in/rafael-oliveira-ad%C3%A3o/')"
+                                    class="icon">
+                                    <ion-icon name="logo-linkedin"></ion-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
     </main>
     <footer>
-        <img src="./assets/img/profile-pixel-48px.png" alt="">
-        <div class="social-media">
-            <a href="https://github.com/rafinha-adao" target="_blank">
-                <i class="bi bi-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/rafael-oliveira-adão" target="_blank">
-                <i class="bi bi-linkedin"></i>
-            </a>
+        <div class="container">
+            <span><small>Desenvolvido com muito ☕</small></span>
         </div>
-        <p>Desenvolvido por Rafael Adão e hospedado pelo GitHub.</p>
     </footer>
 
-    <script src="./js/theme.js"></script>
     <script src="https://unpkg.com/zdog@1/dist/zdog.dist.min.js"></script>
-    <script src="js/animations/laptop.js"></script>
-   
+    <script src="assets/js/laptop.js"></script>
+    <script src="assets/js/index.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,44 @@
+$font_family: 'Roboto',
+sans-serif;
+
+$border-radius: .125rem;
+$border: .125rem solid rgba(255, 255, 255, 0.125);
+
+$font-color: #f4f4f4;
+$font-color-secondary: #d6d6d6;
+
+$color-black: #1B262C;
+$color-gray: #343A40;
+$color-navy: #0F4C75;
+$color-blue: #3282B8;
+$color-white: #BBE1FA;
+
+@mixin screen-sm {
+    @media (max-width: 640px) {
+        @content;
+    }
+}
+
+@mixin screen-md {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin screen-lg {
+    @media (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin screen-xl {
+    @media (min-width: 1280px) {
+        @content;
+    }
+}
+
+@mixin screen-2xl {
+    @media (min-width: 1536px) {
+        @content;
+    }
+}

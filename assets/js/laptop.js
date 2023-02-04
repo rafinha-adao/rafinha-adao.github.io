@@ -28,13 +28,13 @@ let box = new Zdog.Box({
   height: 60,
   depth: 5,
   stroke: false,
-  color: "#0B2D59",
+  color: "#0F4C75",
 });
 
 box.copy({
   addTo: backLaptop,
   translate: { x: 0, y: 42, z: 26 },
-  color: "#04B2D9",
+  color: "#3282B8",
   rotate: { x: -8.2 },
   fill: true,
 });

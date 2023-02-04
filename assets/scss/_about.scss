@@ -1,0 +1,72 @@
+#about {
+
+    .text-about-me {
+        text-align: center;
+        display: grid;
+        gap: .5rem;
+    }
+
+    img.card {
+        margin-inline: auto;
+        padding: 0;
+        width: 8rem;
+        height: 8rem;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .icon {
+        padding: .65rem 0;
+        font-size: 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h3 {
+        margin-inline: auto;
+    }
+
+    form {
+        display: grid;
+        align-content: space-between;
+        gap: 1rem;
+
+        textarea {
+            resize: none;
+            margin-bottom: .5rem;
+            height: 8rem;
+        }
+
+        textarea,
+        input {
+            font-family: $font_family;
+            font-size: 1rem;
+            outline: none;
+            padding: .7rem .9rem;
+            border: $border;
+            border-radius: $border-radius;
+            background-color: $color-gray;
+            color: $font-color;
+            caret-color: $color-navy;
+
+            &:hover,
+            &:focus,
+            &:active {
+                opacity: .8;
+                transition: .25s;
+                outline: .2rem solid $color-navy;
+                border-color: $color-gray;
+            }
+        }
+
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+            transition: background-color 9999s ease-in-out 0s;
+            -webkit-text-fill-color: $font-color;
+        }
+    }
+
+}

@@ -1,0 +1,9 @@
+footer {
+    padding: 1.5rem 0;
+    text-align: center;
+    border-radius: $border-radius;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: $color-navy;
+    border-top: 1px solid rgba(255, 255, 255, 0.125);
+}
