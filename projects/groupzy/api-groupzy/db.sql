@@ -21,7 +21,7 @@ CREATE TABLE `users` (
     `birthday` date DEFAULT NULL,
     `bio` varchar(100) DEFAULT NULL,
     `email` varchar(75) NOT NULL,
-    `idGroup` int(11) NOT NULL,
+    `idGroup` int(11) NULL DEFAULT NULL,
     `hasGroup` tinyint(4) NOT NULL,
     `pass` varchar(100) NOT NULL,
     PRIMARY KEY (`id`)
