@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="../assets/styles/style.css">
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../assets/js/env.js"></script>
-    <script src="../assets/js/auth.js"></script>
+    <script src="assets/js/env.js"></script>
+    <script src="assets/js/auth.js"></script>
     <script>
         let user = JSON.parse(sessionStorage.getItem('user'));
         if (user.hasGroup == "1") {
@@ -33,7 +33,7 @@
             </div>
             <div class="btn-container">
                 <button type="submit" id="btn-create">Criar</button>
-                <button onclick="window.location = '/index.html'" style="margin-top: .5rem;">Cancelar</button>
+                <button onclick="window.location = '../'" style="margin-top: .5rem;">Cancelar</button>
             </div>
         </form>
     </main>
