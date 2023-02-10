@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../assets/js/env.js"></script>
     <script src="../assets/js/auth.js"></script>
@@ -37,8 +38,8 @@
         </form>
     </main>
     <script>
-
         $('#create-group').submit(function (e) {
+            e.preventDefault();
             $('#btn-create').attr("disabled", true);
             $('#btn-create').html('<img src="../assets/img/spinner-loading.svg">');
             $('#btn-create').css({
@@ -47,9 +48,6 @@
                 'align-content': 'center',
                 'justify-content': 'center'
             });
-
-            e.preventDefault();
-
             $.ajax({
                 type: 'POST',
                 url: API_URL + 'groups.php',

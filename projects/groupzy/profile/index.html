@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../assets/js/env.js"></script>
     <script src="../assets/js/auth.js"></script>
@@ -75,7 +76,7 @@
                             if (res.status == 1) {
                                 sessionStorage.setItem('login', true);
                                 sessionStorage.setItem('user', res.user);
-                                window.location = '/';
+                                window.location = '../';
                             } else {
                                 alert('Erro ao salvar alterações!');
                                 $('#btn-save').css({
