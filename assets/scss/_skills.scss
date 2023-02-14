@@ -1,0 +1,18 @@
+#skills {
+    .card {
+        .text-skills {
+            display: grid;
+            gap: .5rem;
+        }
+
+        .icons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .5rem;
+
+            i {
+                font-size: 1.3rem;
+            }
+        }
+    }
+}

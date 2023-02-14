@@ -1,0 +1,21 @@
+#services {
+    .card {
+        .container-icon {
+            padding: 1rem;
+            border: $border;
+            border-radius: $border-radius;
+            width: fit-content;
+            border-color: $color-blue;
+
+            ion-icon {
+                font-size: 2rem;
+                color: $font-color;
+            }
+        }
+
+        .text-service {
+            display: grid;
+            gap: .5rem;
+        }
+    }
+}

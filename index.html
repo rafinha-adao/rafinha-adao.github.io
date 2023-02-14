@@ -8,7 +8,7 @@
 
     <!-- SEO Meta Description -->
     <meta name="description"
-        content="Olá me chamo Rafael e esse é o meu site/portfólio como desenvolvedor, faço trabalhos freelancers e posso te ajudar a dar vida as suas ideias e projetos!">
+        content="Olá me chamo Rafael e esse é o meu site/portfólio de desenvolvedor, faço trabalhos freelancers e posso te ajudar a dar vida as suas ideias e projetos!">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,6 +23,9 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
 
+    <!-- Devicon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
     <!-- CDN Ionicons -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -34,17 +37,14 @@
 
     <header>
         <nav class="container">
-            <div class="cols-2">
-                <div class="container-logo">
-                    <img src="assets/img/favicon.ico" alt="Rafael Adão">
-                    Rafael Adão
-                </div>
+            <div class="container-logo">
+                <img src="assets/img/favicon.ico" alt="Rafael Adão">
+                Rafael Adão
             </div>
         </nav>
     </header>
 
     <main>
-
         <section id="hero">
             <div class="container">
                 <div class="cols-2">
@@ -55,13 +55,56 @@
                             </h1>
                             <p>
                                 Posso ajudar você a tirar suas ideias do papel e transformá-las em um projeto real. E
-                                aí, que tal? É só falar comigo!
+                                aí, o que você acha? É só falar comigo!
                             </p>
                         </div>
                         <button onclick="location = '#about'">Fale comigo</button>
                     </article>
                     <canvas class="zdog-canvas" width="320" height="290"></canvas>
+                </div>
+            </div>
+        </section>
 
+        <section id="services">
+            <div class="container">
+                <h2>Serviços</h2>
+                <div class="cols-3">
+                    <article class="card">
+                        <div class="container-icon">
+                            <ion-icon name="desktop-outline"></ion-icon>
+                        </div>
+                        <div class="text-service">
+                            <h3>Desenvolvimento web</h3>
+                            <p>
+                                Soluções personalizadas que combinam habilidades e criatividade para atender
+                                suas necessidades.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="container-icon">
+                            <ion-icon name="phone-portrait-outline"></ion-icon>
+                        </div>
+                        <div class="text-service">
+                            <h3>Desenvolvimento mobile</h3>
+                            <p>
+                                Aplicativos móveis de alta qualidade, intuitivos, fáceis de usar e eficientes em termos
+                                de desempenho.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="container-icon">
+                            <ion-icon name="shapes-outline"></ion-icon>
+                        </div>
+                        <div class="text-service">
+                            <h3>UX e UI</h3>
+                            <p>
+                                Estudos de caso e empatia com o usuário garantem uma experiência satisfatória e
+                                eficiente para seus clientes.
+                            </p>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -71,13 +114,49 @@
                 <h2>Projetos</h2>
                 <div class="cols-3">
                     <article class="card">
-                        project 1
+                        <div class="img-container">
+                            <img src="assets/img/prints/infinitaanalise.com.br_.png" alt="projeto 1"
+                                onclick="openInNewTab('https://infinitaanalise.com.br/')">
+                        </div>
+                        <div class="text-project">
+                            <h3>Infinita Análise</h3>
+                            <p>Landing page para apresentação e venda de treinamentos de Excel do básico ao avançado.
+                            </p>
+                        </div>
+                        <div class="see-more-container">
+                            <a href="https://infinitaanalise.com.br/" target="_blank" rel="noopener noreferrer">Ver
+                                mais</a>
+                        </div>
                     </article>
                     <article class="card">
-                        project 2
+                        <div class="img-container">
+                            <img src="assets/img/prints/groupzy.rafinhaadao.com_.png" alt="projeto 1"
+                                onclick="openInNewTab('https://groupzy.rafinhaadao.com/')">
+                        </div>
+                        <div class="text-project">
+                            <h3>Groupzy</h3>
+                            <p>O Groupzy foi meu projeto TCC, criado para ser uma rede social de chat baseada em grupos.
+                            </p>
+                        </div>
+                        <div class="see-more-container">
+                            <a href="https://groupzy.rafinhaadao.com/" target="_blank" rel="noopener noreferrer">Ver
+                                mais</a>
+                        </div>
                     </article>
                     <article class="card">
-                        project 3
+                        <div class="img-container">
+                            <img src="assets/img/prints/custom-hss.rafinhaadao.com_.png" alt="projeto 1"
+                                onclick="openInNewTab('https://custom-hss.rafinhaadao.com/')">
+                        </div>
+                        <div class="text-project">
+                            <h3>Custom HSS</h3>
+                            <p>Projeto conceito feito com intenção de facilitar os orçamentos de uma lavanderia de
+                                tênis.</p>
+                        </div>
+                        <div class="see-more-container">
+                            <a href="https://custom-hss.rafinhaadao.com/" target="_blank" rel="noopener noreferrer">Ver
+                                mais</a>
+                        </div>
                     </article>
                 </div>
             </div>
@@ -87,38 +166,79 @@
         <section id="experiences"></section> 
         -->
 
-        <section id="services">
-            <div class="container">
-                <h2>Serviços</h2>
-                <div class="cols-3">
-                    <article class="card">
-                        service 1
-                    </article>
-                    <article class="card">
-                        service 2
-                    </article>
-                    <article class="card">
-                        service 3
-                    </article>
-                </div>
-            </div>
-        </section>
-
         <section id="skills">
             <div class="container">
                 <h2>Conhecimentos</h2>
                 <div class="cols-4">
                     <article class="card">
-                        skill 1
+                        <div class="text-skills">
+                            <div>
+                                <small>Front-end</small>
+                                <h3>Todo o visual de uma aplicação</h3>
+                            </div>
+
+                        </div>
+                        <div class="icons">
+                            <i title="HTML 5" class="devicon-html5-plain colored"></i>
+                            <i title="CSS 3" class="devicon-css3-plain colored"></i>
+                            <i title="Javascript" class="devicon-javascript-plain colored"></i>
+                            <i title="JQuery" class="devicon-jquery-plain colored"></i>
+                            <i title="Sass" class="devicon-sass-original colored"></i>
+                            <i title="Tailwind CSS" class="devicon-tailwindcss-plain colored"></i>
+                            <i title="React" class="devicon-react-original colored"></i>
+                            <i title="Angular" class="devicon-angularjs-plain colored"></i>
+                        </div>
                     </article>
                     <article class="card">
-                        skill 2
+                        <div class="text-skills">
+                            <div>
+                                <small>Back-end</small>
+                                <h3>A parte que faz o sistema funcionar</h3>
+                            </div>
+
+                        </div>
+                        <div class="icons">
+                            <i title="PHP" class="devicon-php-plain colored"></i>
+                            <i title="Laravel" class="devicon-laravel-plain colored"></i>
+                            <i title="MySQL" class="devicon-mysql-plain colored"></i>
+                            <i title="NodeJS" class="devicon-nodejs-plain colored"></i>
+                            <i title="MongoDB" class="devicon-mongodb-plain colored"></i>
+                        </div>
                     </article>
                     <article class="card">
-                        skill 3
+                        <div class="text-skills">
+                            <div>
+                                <small>Mobile</small>
+                                <h3>Quando o assunto é aplicativo</h3>
+                            </div>
+
+                        </div>
+                        <div class="icons">
+                            <i title="Android Studio" class="devicon-androidstudio-plain colored"></i>
+                            <i title="Java" class="devicon-java-plain colored"></i>
+                            <i title="Kotlin" class="devicon-kotlin-plain colored"></i>
+                            <i title="Dart" class="devicon-dart-plain colored"></i>
+                            <i title="Flutter" class="devicon-flutter-plain colored"></i>
+                            <i title="Ionic" class="devicon-ionic-original colored"></i>
+                        </div>
                     </article>
                     <article class="card">
-                        skill 4
+                        <div class="text-skills">
+                            <div>
+                                <small>Ferramentas</small>
+                                <h3>Tudo que facilita o desenvolvimento</h3>
+                            </div>
+
+                        </div>
+                        <div class="icons">
+                            <i title="VSCode" class="devicon-vscode-plain colored"></i>
+                            <i title="Git" class="devicon-git-plain colored"></i>
+                            <i title="Github" class="devicon-github-original colored"></i>
+                            <i title="Figma" class="devicon-figma-plain colored"></i>
+                            <i title="Canva" class="devicon-canva-original colored"></i>
+                            <i title="Photoshop" class="devicon-photoshop-plain colored"></i>
+                            <i title="Trello" class="devicon-trello-plain colored"></i>
+                        </div>
                     </article>
                 </div>
             </div>
@@ -128,22 +248,26 @@
             <div class="container">
                 <h2>Fale comigo!</h2>
                 <div class="cols-2 card">
-                    <form action="" method="POST">
+                    <form action="send_mail.php" method="POST">
                         <input type="text" name="name" id="name" placeholder="Digite seu nome" maxlength="80">
                         <input type="email" name="email" id="email" placeholder="Digite seu e-mail" maxlength="80">
-                        <textarea name="_message" id="message" placeholder="Digite sua mensagem"
+                        <textarea name="message" id="message" placeholder="Digite sua mensagem"
                             maxlength="240"></textarea>
-
                         <button type="submit">Enviar</button>
                     </form>
                     <article>
                         <img class="card" src="assets/img/about-me.jpg" alt="Eu">
-                        <div class="text-about-me">
+                        <div class="content-about">
                             <h3>Rafael de Oliveira Adão</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua.
-                            </p>
+                            <div class="text-about-me">
+                                <p>
+                                    Estudante, fã de vídeo games, futebol, basquete e música.
+                                </p>
+                                <p>
+                                    Amo programar pelo simples fato de ser muito satisfatório ver algo, que partiu
+                                    de uma ideia e/ou esboço, funcionando e ver as pessoas usando e gostando daquilo.
+                                </p>
+                            </div>
                         </div>
                         <div class="group-social-links cols-3">
                             <div>
@@ -169,8 +293,8 @@
                 </div>
             </div>
         </section>
-
     </main>
+
     <footer>
         <div class="container">
             <span><small>Desenvolvido com muito ☕</small></span>

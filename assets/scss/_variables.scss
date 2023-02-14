@@ -13,6 +13,12 @@ $color-navy: #0F4C75;
 $color-blue: #3282B8;
 $color-white: #BBE1FA;
 
+@mixin screen-xs {
+    @media (max-width: 360px) {
+        @content;
+    }
+}
+
 @mixin screen-sm {
     @media (max-width: 640px) {
         @content;
@@ -20,7 +26,7 @@ $color-white: #BBE1FA;
 }
 
 @mixin screen-md {
-    @media (min-width: 768px) {
+    @media (min-width: 770px) {
         @content;
     }
 }

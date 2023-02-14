@@ -1,28 +1,5 @@
 #about {
 
-    .text-about-me {
-        text-align: center;
-        display: grid;
-        gap: .5rem;
-    }
-
-    img.card {
-        margin-inline: auto;
-        padding: 0;
-        width: 8rem;
-        height: 8rem;
-        object-fit: cover;
-        border-radius: 50%;
-    }
-
-    .icon {
-        padding: .65rem 0;
-        font-size: 1.25rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
     h3 {
         margin-inline: auto;
     }
@@ -67,6 +44,41 @@
             transition: background-color 9999s ease-in-out 0s;
             -webkit-text-fill-color: $font-color;
         }
+
+        button {
+            @include screen-md {
+                width: 11rem;
+                margin-left: auto;
+            }
+        }
+    }
+
+    img.card {
+        margin-inline: auto;
+        padding: 0;
+        width: 6rem;
+        height: 6rem;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .content-about {
+        text-align: center;
+        display: grid;
+        gap: .5rem;
+
+        .text-about-me {
+            display: grid;
+            gap: .4rem;
+        }
+    }
+
+    .icon {
+        padding: .65rem 0;
+        font-size: 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
 }

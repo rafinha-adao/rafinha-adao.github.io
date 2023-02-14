@@ -1,5 +1,15 @@
 #hero {
+    button {
+        @include screen-md {
+            width: 11rem;
+        }
+    }
+
     .zdog-canvas {
         margin-inline: auto;
+
+        @include screen-xs {
+            width: 100%;
+        }
     }
 }

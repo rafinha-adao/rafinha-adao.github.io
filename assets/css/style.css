@@ -59,6 +59,25 @@ button:focus {
   outline: 0.2rem solid #0F4C75;
 }
 
+a {
+  font-weight: 600;
+  color: #3282B8;
+  font-size: 1rem;
+}
+a:hover {
+  opacity: 0.9;
+  transition: 0.25s;
+  text-decoration: underline;
+}
+a:active {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+a:focus {
+  outline: 0.2rem solid #0F4C75;
+  text-decoration: underline;
+}
+
 h1 {
   font-size: 2.5rem;
   margin-bottom: 1.25rem;
@@ -69,12 +88,13 @@ h2 {
 }
 
 p,
+small,
 span {
   color: #d6d6d6;
 }
 
 .container {
-  max-width: 70rem;
+  max-width: 78rem;
   margin-inline: auto;
   padding: 0 1rem;
 }
@@ -88,9 +108,9 @@ span {
   display: grid;
   gap: 3rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 770px) {
   .cols-2 {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -98,9 +118,9 @@ span {
   display: grid;
   gap: 1rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 770px) {
   .cols-3 {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -108,19 +128,19 @@ span {
   display: grid;
   gap: 1rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 770px) {
   .cols-4 {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (min-width: 1024px) {
   .cols-4 {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 .card {
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 0.125rem;
   backdrop-filter: blur(1rem) saturate(180%);
   -webkit-backdrop-filter: blur(1rem) saturate(180%);
@@ -142,7 +162,7 @@ header {
 header nav .cols-2 {
   grid-template-columns: 1fr 1fr;
 }
-@media (min-width: 768px) {
+@media (min-width: 770px) {
   header nav .mobile-button-menu {
     display: none;
   }
@@ -160,7 +180,7 @@ header nav .container-logo img {
 header nav ul {
   display: none;
 }
-@media (min-width: 768px) {
+@media (min-width: 770px) {
   header nav ul {
     display: flex;
     justify-content: end;
@@ -179,30 +199,20 @@ header nav ul a:focus {
   outline: none;
 }
 
+@media (min-width: 770px) {
+  #hero button {
+    width: 11rem;
+  }
+}
 #hero .zdog-canvas {
   margin-inline: auto;
 }
+@media (max-width: 360px) {
+  #hero .zdog-canvas {
+    width: 100%;
+  }
+}
 
-#about .text-about-me {
-  text-align: center;
-  display: grid;
-  gap: 0.5rem;
-}
-#about img.card {
-  margin-inline: auto;
-  padding: 0;
-  width: 8rem;
-  height: 8rem;
-  object-fit: cover;
-  border-radius: 50%;
-}
-#about .icon {
-  padding: 0.65rem 0;
-  font-size: 1.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 #about h3 {
   margin-inline: auto;
 }
@@ -243,6 +253,97 @@ header nav ul a:focus {
 #about form input:-webkit-autofill:active {
   transition: background-color 9999s ease-in-out 0s;
   -webkit-text-fill-color: #f4f4f4;
+}
+@media (min-width: 770px) {
+  #about form button {
+    width: 11rem;
+    margin-left: auto;
+  }
+}
+#about img.card {
+  margin-inline: auto;
+  padding: 0;
+  width: 6rem;
+  height: 6rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+#about .content-about {
+  text-align: center;
+  display: grid;
+  gap: 0.5rem;
+}
+#about .content-about .text-about-me {
+  display: grid;
+  gap: 0.4rem;
+}
+#about .icon {
+  padding: 0.65rem 0;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#services .card .container-icon {
+  padding: 1rem;
+  border: 0.125rem solid rgba(255, 255, 255, 0.125);
+  border-radius: 0.125rem;
+  width: fit-content;
+  border-color: #3282B8;
+}
+#services .card .container-icon ion-icon {
+  font-size: 2rem;
+  color: #f4f4f4;
+}
+#services .card .text-service {
+  display: grid;
+  gap: 0.5rem;
+}
+
+#projects .cols-3 .card .img-container img {
+  width: 100%;
+  height: 11.5rem;
+  object-fit: cover;
+  object-position: center 0;
+  border: 0.125rem solid rgba(255, 255, 255, 0.125);
+  border-radius: 0.125rem;
+  cursor: pointer;
+}
+#projects .cols-3 .card .text-project {
+  display: grid;
+  gap: 0.5rem;
+}
+@media (min-width: 770px) {
+  #projects .cols-3 .card .text-project p {
+    min-height: 4.75rem;
+  }
+}
+@media (min-width: 1024px) {
+  #projects .cols-3 .card .text-project p {
+    min-height: 0;
+  }
+}
+#projects .cols-3 .card .see-more-container {
+  text-align: end;
+}
+@media (min-width: 770px) {
+  #projects .cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+#skills .card .text-skills {
+  display: grid;
+  gap: 0.5rem;
+}
+#skills .card .icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+#skills .card .icons i {
+  font-size: 1.3rem;
 }
 
 footer {
