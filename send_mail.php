@@ -2,10 +2,8 @@
 $name       = $_POST['name'];
 $email      = $_POST['email'];
 $message    = $_POST['message'];
-
 $to         = "rafaeldeoliveiraadao@gmail.com";
 $subject    = "Novo e-mail! (rafinhaadao.com)";
-
 $message    = "
     <html>
         <head>
@@ -29,11 +27,10 @@ $message    = "
         </body>
     </html>
 ";
-
 $headers    = "MIME-Version: 1.0" . "\r\n";
 $headers    .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 $headers    .= "From: $email" . "\r\n";
 $headers    .= "Cc: raphinha.oliveira11@gmail.com" . "\r\n";
 
 mail($to, $subject, $message, $headers);
-header("Location: ./");
+header("Location: ./success.html");

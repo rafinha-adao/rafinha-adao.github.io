@@ -206,6 +206,8 @@ header nav ul a:focus {
 }
 #hero .zdog-canvas {
   margin-inline: auto;
+  width: 320px;
+  height: 290px;
 }
 @media (max-width: 360px) {
   #hero .zdog-canvas {

@@ -7,6 +7,8 @@
 
     .zdog-canvas {
         margin-inline: auto;
+        width: 320px;
+        height: 290px;
 
         @include screen-xs {
             width: 100%;
