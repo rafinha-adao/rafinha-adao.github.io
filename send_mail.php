@@ -1,4 +1,7 @@
 <?php
+$honeypot   = $_POST['firstname'];
+if (!empty($honeypot)) return;
+
 $name       = $_POST['name'];
 $email      = $_POST['email'];
 $message    = $_POST['message'];

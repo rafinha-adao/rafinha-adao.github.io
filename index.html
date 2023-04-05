@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Metas og/description -->
-    <meta property="og:title" content="Rafael Adão"/>
-    <meta property="og:type" content="Portfólio"/>
-    <meta property="og:url" content="https://rafinhaadao.com"/>
-    <meta property="og:image" content="assets/img/prints/rafinhaadao.com_.png"/>
+    <meta property="og:title" content="Rafael Adão" />
+    <meta property="og:type" content="Portfólio" />
+    <meta property="og:url" content="https://rafinhaadao.com" />
+    <meta property="og:image" content="assets/img/prints/rafinhaadao.com_.png" />
     <meta name="description"
         content="Olá me chamo Rafael e esse é o meu site/portfólio de desenvolvedor, faço trabalhos freelancers e posso te ajudar a dar vida as suas ideias e projetos!">
 
@@ -253,8 +253,12 @@
                 <h2>Fale comigo!</h2>
                 <div class="cols-2 card">
                     <form action="send_mail.php" method="POST">
+                        <!-- honeypot -->
+                        <input name="firstname" type="text" id="firstname" style="opacity: 0;position:absolute;top: 0;left: 0;height: 0;width: 0;z-index: -1;">
+                        <!-- honeypot -->
                         <input type="text" name="name" id="name" placeholder="Digite seu nome" maxlength="80" required>
-                        <input type="email" name="email" id="email" placeholder="Digite seu e-mail" maxlength="80" required>
+                        <input type="email" name="email" id="email" placeholder="Digite seu e-mail" maxlength="80"
+                            required>
                         <textarea name="message" id="message" placeholder="Digite sua mensagem"
                             maxlength="240"></textarea>
                         <button type="submit">Enviar</button>
