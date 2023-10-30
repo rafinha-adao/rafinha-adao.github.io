@@ -131,7 +131,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input type="file" name="imagens[]" accept="image/*" multiple>
         <label for="qualidade">Qualidade (1-100):</label>
         <input type="number" name="qualidade" id="qualidade" min="1" max="100" value="60">
-        <input type="submit" value="Enviar imagens">
+        <input type="submit" value="Processar imagens">
     </form>
 </body>
 
