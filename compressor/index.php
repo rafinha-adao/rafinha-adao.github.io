@@ -1,24 +1,3 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compressor</title>
-</head>
-
-<body>
-    <form action="" method="post" enctype="multipart/form-data">
-        <label for="imagens">Selecione até 25 imagens para upload:</label>
-        <input type="file" name="imagens[]" accept="image/*" multiple>
-        <label for="qualidade">Qualidade (1-100):</label>
-        <input type="number" name="qualidade" id="qualidade" min="1" max="100" value="55">
-        <input type="submit" value="Enviar imagens">
-    </form>
-</body>
-
-</html>
-
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $upload_dir = "uploads/";
@@ -43,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Qualidade da imagem (definida a partir do formulário)
-    $qualidade_imagem = isset($_POST['qualidade']) ? (int)$_POST['qualidade'] : 55;
+    $qualidade_imagem = isset($_POST['qualidade']) ? (int)$_POST['qualidade'] : 60;
 
     function redimensionar_imagem($imagem, $largura_max, $altura_max)
     {
@@ -136,3 +115,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compressor</title>
+</head>
+
+<body>
+    <form action="" method="post" enctype="multipart/form-data">
+        <label for="imagens">Selecione até 25 imagens para upload:</label>
+        <input type="file" name="imagens[]" accept="image/*" multiple>
+        <label for="qualidade">Qualidade (1-100):</label>
+        <input type="number" name="qualidade" id="qualidade" min="1" max="100" value="60">
+        <input type="submit" value="Enviar imagens">
+    </form>
+</body>
+
+</html>
