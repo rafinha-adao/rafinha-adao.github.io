@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XX XX XXX</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            min-height: 100svh;
+            background: rgb(251, 63, 210);
+            background: radial-gradient(circle, rgba(251, 63, 210, 1) 0%, rgba(252, 70, 107, 1) 100%);
+            font-family: "Poppins", sans-serif;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-block: 24px;
+        }
+
+        main {
+            text-align: center;
+        }
+
+        button {
+            border: solid 2px #ffffff;
+            background-color: rgba(252, 70, 107, 1);
+            border-radius: 32px;
+            font-size: 16px;
+            padding: 8px 32px;
+            color: #ffffff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="tenor-gif-embed" data-postid="11816971814746635421" data-share-method="host" data-aspect-ratio="1"
+            data-width="100%"><a href="https://tenor.com/view/kiss-gif-11816971814746635421">Kiss GIF</a>from <a
+                href="https://tenor.com/search/kiss-gifs">Kiss GIFs</a>
+        </div>
+        <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        <h1>XX XX XXX</h1>
+        <div>
+            <button id="btnRevealText">Revelar</button>
+            <button id="btnHideText" style="display: none;">Esconder</button>
+        </div>
+    </main>
+
+    <script>
+        const el = document.getElementsByTagName("h1")[0]
+
+        const interval = 250
+
+        const btnRevealText = document.getElementById("btnRevealText")
+        const btnHideText = document.getElementById("btnHideText")
+
+        btnRevealText.addEventListener("click", revealText)
+        btnHideText.addEventListener("click", hideText)
+
+        function revealText() {
+            let revealed = "EU TE AMO"
+            let revealedLetters = revealed.split("")
+
+            let hide = el.textContent
+            let hideLetters = hide.split("")
+
+            revealedLetters.forEach((revealedLetter, i) => {
+                if (revealedLetter == " ") return
+
+                setTimeout(() => {
+                    hideLetters[i] = revealedLetter
+                    let newTextContent = hideLetters.join("")
+
+                    el.textContent = newTextContent
+                    document.title = newTextContent
+
+                    if (i == revealedLetters.length - 1) {
+                        btnRevealText.style.display = "none"
+                        btnHideText.style.display = "inline"
+                    }
+                }, interval * i)
+            })
+
+
+        }
+
+        function hideText() {
+            let revealed = el.textContent
+            let revealedLetters = revealed.split("")
+
+            let hide = "XX XX XXX"
+            let hideLetters = hide.split("")
+
+            hideLetters.forEach((hideLetter, i) => {
+                if (hideLetter == " ") return
+
+                setTimeout(() => {
+                    revealedLetters[i] = hideLetter
+                    let newTextContent = revealedLetters.join("")
+
+                    el.textContent = newTextContent
+                    document.title = newTextContent
+
+                    if (i == hideLetters.length - 1) {
+                        btnRevealText.style.display = "inline"
+                        btnHideText.style.display = "none"
+                    }
+                }, interval * i)
+            })
+        }
+    </script>
+</body>
+
+</html>

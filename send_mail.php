@@ -6,11 +6,11 @@ $name       = $_POST['name'];
 $email      = $_POST['email'];
 $message    = $_POST['message'];
 $to         = "rafaeldeoliveiraadao@gmail.com";
-$subject    = "Novo e-mail! (rafinhaadao.com)";
+$subject    = "Novo e-mail! (rafinha.dev)";
 $message    = "
     <html>
         <head>
-            <title>Novo e-mail! (rafinhaadao.com)</title>
+            <title>Novo e-mail! (rafinha.dev)</title>
         </head>
         <body>
             <table>
